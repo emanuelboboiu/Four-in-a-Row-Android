@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="tvTextWhite">#ffffff</color>
+    <color name="tvTextBlack">#000000</color>
+    <color name="tvTextColor">#EEEEEE</color>
+    <color name="btTextColor">#EEEEEE</color>
+    <color name="ll_action_bar_background">#333333</color>
+    <color name="ll_action_bar_text">#EEEEEE</color>
+    <color name="border_chosen_piece">#AA0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="background_selected">#99ff99</color>
+    <color name="text_white_selected">#ff9999</color>
+    <color name="text_black_selected">#aa3333</color>
+
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">четыре в ряд</string>
+    <string name="title_activity_connect_four">четыре в ряд</string>
+    <string name="cf_game_name">четыре в ряд</string>
+    <string name="cf_new">Начать игру</string>
+    <string name="cf_status">Добро пожаловать!</string>
+    <string name="welcome_message">Здравствуйте %1$s!</string>
+    <string name="cf_abandon_game">Сдаться</string>
+    <string name="cf_game_type0">Игра с ботом</string>
+    <string name="cf_game_type1">Игра с человеком на одном устройстве</string>
+    <string name="cf_cell_already_used">%1$s уже используется</string>
+    <string name="cf_cell_forbidden">%1$s Запрет! Ничего нету ниже.</string>
+    <string name="cf_column_is_full">Столбец %1$s заполнен.</string>
+    <string name="dealer">Бот</string>
+    <string name="partner">партнёр</string>
+    <string name="my_cf_total">Вы: %1$s</string>
+    <string name="dealers_cf_total">дилер: %1$s</string>
+    <string name="partners_cf_total">Партнёр: %1$s</string>
+    <string name="cf_current_move">Количество ходов %1$s – %2$s</string>
+    <string name="cf_win">Поздравляем! Вы выиграли этот раунд!</string>
+    <string name="cf_lose">К сожалению,Вы проиграли этот раунд…</string>
+    <string name="cf_draw">В этом раунде получилась ничья…</string>
+    <string name="mnu_difficulty_level">Выбрать уровень сложности…</string>
+    <string name="cf_choose_level">Выберите уровень сложности</string>
+    <string name="cf_easy">Очень лёгкий</string>
+    <string name="cf_medium">Лёгкий</string>
+    <string name="cf_hard">Средний</string>
+    <string name="cf_impossible">Трудный</string>
+    <string name="action_settings">Основные настройки</string>
+    <string name="general_score">Количество очков:\n%1$s %2$s – %3$s %4$s</string>
+
+    <!-- Added in Beta 3: -->
+    <string name="msg_ok">Окей</string>
+    <string name="msg_cancel">Отмена</string>
+    <string name="msg_close">Закрыть</string>
+    <string name="warning">Предупреждение!</string>
+    <string name="error">Ошибка!</string>
+    <string name="mnu_nickname">Ник…</string>
+    <string name="nickname_title">Ник</string>
+    <string name="change_nickname_message">Введите Ваш новый ник. Он будет отображаться в разных игровых ситуациях.: </string>
+    <string name="change_nickname_message2">Ваш ник %1$s.\nВведите Ваш новый ник,если Вы хотите изменить его: </string>
+    <string name="change_nickname_hint"> Напишите здесь Ваш новый ник.…</string>
+    <string name="anonymous">Аноним</string>
+    <string name="nickname_too_short">Длинна Вашего ника должна быть хотя бы 3 символа.\nПожалуйста, исправьте Ваш ник.</string>
+    <string name="nickname_success">Ваш ник %1$s.\nон появится в разных местах игры.</string>
+    <string name="no_connection_available">Нет подключения к интернету.\nПожалуйста, подключите Ваше устройство к интернету и попробуйте снова.</string>
+    <string name="you">Вы</string>
+    <string name="title_activity_settings">Общие настройки</string>
+    <string name="enable_sounds">Включить звуки</string>
+    <string name="enable_music">Включить фоновую музыку</string>
+    <string name="enable_screen_awake">Запретить выключение экрана</string>
+    <string name="enable_portrait_orientation">Запретить изменение ориентации экрана в приложении при изменении ориентации устройство</string>
+    <string name="enable_shake">Встряхнуть устройство,чтобы начать новую игру</string>
+    <string name="enable_speech">Проговаривать сообщения синтезатором речи (полезно для людей с нарушением зрения)</string>
+
+    <!-- About dialog: -->
+    <string name="mnu_about">О программе…</string>
+    <string name="about_title">Об игре Четыре в ряд</string>
+    <string name="app_version">Четыре в ряд, версия 2.0</string>
+    <string name="app_release_date">Версия 1.0 была написана в Воскресение, 19-го марта 2017 года</string>
+    <string name="app_last_update">Текущая версия 2.0, 2022</string>
+    <string name="app_creator">Разработчик: Emanuel Boboiu (Manu)</string>
+    <string name="phone_number">Телефон: +40740203043</string>
+    <string name="email_address">Е-мэйл: android@pontes.ro</string>
+    <string name="web_address">сайт: www.android.pontes.ro</string>
+    <string name="app_credits1">Дизайнер: Iulian Duma</string>
+    <string name="app_credits2">Бета тестеры: Iulian Duma</string>
+    <string name="translators">Переводчики - Александр Козловский и Игорь Мельников</string>
+
+    <!-- To rate the application: -->
+    <string name="mnu_rate">Оценить приложение…</string>
+    <string name="title_rate_app">Оставьте отзыв о Connect Four (желательно на румынском или на английском)</string>
+    <string name="body_rate_app">Если Вам нравится эта игра, оцените пожалуйста её в плеймаркете.</string>
+    <string name="bt_rate">Оставить отзыв сейчас!</string>
+    <string name="bt_not_now">Позже!</string>
+
+    <!-- Play against computer or a partner: -->
+    <string name="play_against_computer">Игра с ботом</string>
+    <string name="play_against_partner">Вы будете играть с партнёром на одном устройстве</string>
+    <string name="mnu_game_type">Игровые настройки…</string>
+    <string name="title_game_type_alert">Параметры игры</string>
+    <string name="choose_color_in_game_type_alert">Выберите цвет приложения:</string>
+    <string name="play_with_yellow">Жёлтый</string>
+    <string name="play_with_red">Красный</string>
+
+    <!-- Strings for Android TV menu: -->
+    <string name="mnu_tv_game_type">Игра…</string>
+    <string name="mnu_tv_level">Уровень…</string>
+    <string name="mnu_tv_nickname">Ник…</string>
+    <string name="mnu_tv_settings">Настройки</string>
+    <string name="mnu_tv_about">О программе…</string>
+
+    <!-- Other strings: -->
+    <string name="warning_no_available_if_started">Извините! Этот диалог не доступен, если игра уже начата.\nПопробуйте сново после завершения этой игры.</string>
+    <string name="tv_timer">%1$s:%2$s – Вы %3$s%%, %4$s %5$s%%</string>
+    <string name="bt_reset_to_defaults">Сбросить игровые настройки поумолчанию…</string>
+    <string name="title_default_settings">Сбросить поумолчанию</string>
+    <string name="body_default_settings">Вы действительно хотите сбросить игровые настройки?\nПриложение вернётся в начальное состояние.</string>
+    <string name="msg_yes">Да</string>
+    <string name="msg_no">Нет</string>
+    <string name="user_won_entire_game">Поздравляем! %1$s выиграл эту игру!</string>
+    <string name="partner_won_entire_game">К сожалению, %1$s выиграл эту игру!</string>
+    <string name="title_abandon_game">Сдаться</string>
+    <string name="body_abandon_game">Вы действительно хотите сдаться в этом раунде</string>
+    <string name="abandon_at_user_turn_message">Сдаться можно только во время Вашего хода\n дождитесь начала Вашего хода и попробуйте снова!</string>
+    <string name="mnu_statistics">Онлайн статистика</string>
+
+</resources>

@@ -1,0 +1,198 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin_tv"
+    android:paddingTop="@dimen/activity_vertical_margin_tv"
+    android:paddingRight="@dimen/activity_horizontal_margin_tv"
+    android:paddingBottom="@dimen/activity_vertical_margin_tv"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.45">
+
+        <LinearLayout
+            android:id="@+id/firstLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/topTVMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llActionBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_below_controls"
+                    android:background="@color/ll_action_bar_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btSettings"
+                        style="@style/llActionBarForTVButtonsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:nextFocusDown="@+id/btCfNew"
+                        android:onClick="setGameTypeFromXML"
+                        android:text="@string/mnu_tv_game_type" />
+
+                    <Button
+                        style="@style/llActionBarForTVButtonsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:nextFocusDown="@+id/btCfNew"
+                        android:onClick="chooseLevelFromXML"
+                        android:text="@string/mnu_tv_level" />
+
+                    <Button
+                        style="@style/llActionBarForTVButtonsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:nextFocusDown="@+id/btCfNew"
+                        android:onClick="changeNicknameFromXML"
+                        android:text="@string/mnu_tv_nickname" />
+
+                    <Button
+                        style="@style/llActionBarForTVButtonsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:nextFocusDown="@+id/btCfNew"
+                        android:onClick="goToSettingsFromXML"
+                        android:text="@string/mnu_tv_settings" />
+
+                    <Button
+                        style="@style/llActionBarForTVButtonsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:nextFocusDown="@+id/btCfNew"
+                        android:onClick="aboutDialogFromXML"
+                        android:text="@string/mnu_tv_about" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tvGeneralScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_below_controls"
+                android:gravity="center_horizontal"
+                android:text="@string/general_score"
+                android:textColor="@color/tvTextColor"
+                android:textSize="@dimen/text_size_main" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBottomInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- The chronometer: -->
+
+            <Chronometer
+                android:id="@+id/tvGameTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_below_controls"
+                android:gravity="center_horizontal"
+                android:textColor="@color/tvTextColor"
+                android:textSize="@dimen/text_size_main2" />
+
+            <TextView
+                android:id="@+id/tvCfStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_below_controls"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/cf_status"
+                android:textColor="@color/tvTextColor"
+                android:textSize="@dimen/text_size_main" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="@dimen/margin_below_controls"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/cfChangeGameType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/between_image_land_buttons"
+                    android:layout_marginRight="@dimen/between_image_land_buttons"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/selector_background_selected"
+                    android:contentDescription="@string/cf_game_type1"
+                    android:nextFocusUp="@+id/btSettings"
+                    android:onClick="changeGameType"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/button_partner" />
+
+                <ImageButton
+                    android:id="@+id/btCfNew"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/between_image_land_buttons"
+                    android:layout_marginRight="@dimen/between_image_land_buttons"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/selector_background_selected"
+                    android:contentDescription="@string/cf_new"
+                    android:nextFocusUp="@+id/btSettings"
+                    android:onClick="newGridGame"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/button_start" />
+
+                <ImageButton
+                    android:id="@+id/cfAbandon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/between_image_land_buttons"
+                    android:layout_marginRight="@dimen/between_image_land_buttons"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/selector_background_selected"
+                    android:contentDescription="@string/cf_abandon_game"
+                    android:nextFocusUp="@+id/btSettings"
+                    android:onClick="abandonGame"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/button_abandon" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.55">
+
+        <!-- A table for the grid itself: -->
+
+        <TableLayout
+            android:id="@+id/tlGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"></TableLayout>
+    </RelativeLayout>
+
+</LinearLayout>

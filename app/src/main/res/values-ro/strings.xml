@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">4 într-o linie</string>
+    <string name="title_activity_connect_four">4 într-o linie</string>
+    <string name="cf_game_name">4 într-o linie</string>
+    <string name="cf_new">Start</string>
+    <string name="cf_status">Bun venit!</string>
+    <string name="welcome_message">Bun venit, %1$s!</string>
+    <string name="cf_abandon_game">Abandon</string>
+    <string name="cf_game_type0">Joacă contra calculatorului</string>
+    <string name="cf_game_type1">Joacă cu un partener</string>
+    <string name="cf_cell_already_used">%1$s este deja ocupată</string>
+    <string name="cf_cell_forbidden">%1$s interzisă! Nu este nimic sub.</string>
+    <string name="cf_column_is_full">Coloana %1$s este plină.</string>
+    <string name="dealer">Robot</string>
+    <string name="partner">Partener</string>
+    <string name="my_cf_total">Tu: %1$s</string>
+    <string name="dealers_cf_total">Robot: %1$s</string>
+    <string name="partners_cf_total">Partener: %1$s</string>
+    <string name="cf_current_move">Mutarea %1$s – %2$s</string>
+    <string name="cf_win">Felicitări! Ai câștigat această rundă!</string>
+    <string name="cf_lose">Păcat! Ai pierdut această rundă…</string>
+    <string name="cf_draw">Această rundă a fost egal…</string>
+    <string name="mnu_difficulty_level">Nivel…</string>
+    <string name="cf_choose_level">Alege nivelul de dificultate</string>
+    <string name="cf_easy">Foarte ușor</string>
+    <string name="cf_medium">Ușor</string>
+    <string name="cf_hard">Mediu</string>
+    <string name="cf_impossible">Greu</string>
+    <string name="action_settings">Setări generale</string>
+    <string name="general_score">Scor:\n%1$s %2$s – %3$s %4$s</string>
+
+    <!-- Added in Beta 3: -->
+    <string name="msg_ok">OK</string>
+    <string name="msg_cancel">Anulare</string>
+    <string name="msg_close">Închidere</string>
+    <string name="warning">Avertisment!</string>
+    <string name="error">Eroare!</string>
+    <string name="mnu_nickname">Nume…</string>
+    <string name="nickname_title">Nume</string>
+    <string name="change_nickname_message">Scrie un nume (poreclă). Este nevoie pentru a fi afișat în diferite locuri: </string>
+    <string name="change_nickname_message2">Numele tău actual este %1$s.\nScrie un nume nou dacă vrei să-l schimbi: </string>
+    <string name="change_nickname_hint">Scrie aici noul tău nume (poreclă)…</string>
+    <string name="anonymous">Anonim</string>
+    <string name="nickname_too_short">Numele completat e prea scurt.\nTe rugăm scrie din nou minim trei litere.</string>
+    <string name="nickname_success">Noul tău nume este %1$s.\nAcesta va apărea în diferite locuri în joc.</string>
+    <string name="no_connection_available">Am detectat că nu există conexiune la Internet.\nTe rugăm conectează dispozitivul la Internet și încearcă din nou.</string>
+    <string name="you">Tu</string>
+    <string name="title_activity_settings">Setări generale</string>
+    <string name="enable_sounds">Activare sunete</string>
+    <string name="enable_music">Activare muzică de fundal</string>
+    <string name="enable_screen_awake">Menținere ecran activ</string>
+    <string name="enable_portrait_orientation">Forțare orientare portret</string>
+    <string name="enable_speech">Activare vorbire pentru îmbunătățirea accesibilității</string>
+
+    <!-- About dialog: -->
+    <string name="mnu_about">Despre…</string>
+    <string name="about_title">Despre Joc</string>
+    <string name="app_version">4 într-o linie, versiunea 2.0</string>
+    <string name="app_release_date">Versiunea 1.0 a fost finalizată duminică, 19 martie 2017\nJocul a fost schimbat la denumirea 4 într-o linie sâmbătă, 16 decembrie 2017</string>
+    <string name="app_last_update">Ultima actualizare: versiune 2.0, finalizată duminică, 11 decembrie 2022</string>
+    <string name="app_creator">Programat de Emanuel Boboiu (Manu)</string>
+    <string name="phone_number">Telefon: +40740203043</string>
+    <string name="email_address">E-mail: android@pontes.ro</string>
+    <string name="web_address">Web: www.android.pontes.ro</string>
+    <string name="app_credits1">Design creat de Iulian Duma</string>
+    <string name="app_credits2">Testare beta: Iulian Duma</string>
+    <string name="translators">În limba română de Emanuel Boboiu</string>
+
+    <!-- To rate the application: -->
+    <string name="mnu_rate">Evaluare…</string>
+    <string name="title_rate_app">Evaluare joc</string>
+    <string name="body_rate_app">Dacă îți place acest joc, te rugăm să îl evaluezi în Magazin Play.</string>
+    <string name="bt_rate">Evaluează!</string>
+    <string name="bt_not_now">Mai târziu!</string>
+
+    <!-- Play against computer or a partner: -->
+    <string name="play_against_computer">Vei juca contra Robotului</string>
+    <string name="play_against_partner">Vei juca contra unui partener</string>
+    <string name="mnu_game_type">Setări joc…</string>
+    <string name="title_game_type_alert">Setări joc</string>
+    <string name="choose_color_in_game_type_alert">Alege culoarea ta apăsând-o mai jos:</string>
+    <string name="play_with_yellow">Joacă cu galben</string>
+    <string name="play_with_red">Joacă cu roșu</string>
+
+    <!-- Strings for Android TV menu: -->
+    <string name="mnu_tv_game_type">Tip joc…</string>
+    <string name="mnu_tv_level">Nivel…</string>
+    <string name="mnu_tv_nickname">Nume…</string>
+    <string name="mnu_tv_settings">Setări</string>
+    <string name="mnu_tv_about">Despre…</string>
+
+    <!-- Other strings: -->
+    <string name="warning_no_available_if_started">Ne pare rău!\nAcest dialog nu este valabil când o partidă este deja în desfășurare.\nÎncearcă din nou după ce termini jocul curent.</string>
+    <string name="tv_timer">%1$s:%2$s – tu %3$s%%, %4$s %5$s%%</string>
+    <string name="bt_reset_to_defaults">Resetare joc la valorile implicite…</string>
+    <string name="title_default_settings">Resetare joc</string>
+    <string name="body_default_settings">Ești sigur că vrei să resetezi jocul?\nAcesta va fi adus la setările inițiale.</string>
+    <string name="msg_yes">Da</string>
+    <string name="msg_no">Nu</string>
+    <string name="user_won_entire_game">Felicitări! %1$s a câștigat partida!</string>
+    <string name="partner_won_entire_game">Păcat! %1$s a câștigat partida!</string>
+    <string name="title_abandon_game">Abandon</string>
+    <string name="body_abandon_game">Ești sigur că vrei să abandonezi această rundă?</string>
+    <string name="abandon_at_user_turn_message">Abandonul este posibil doar când este rândul tău la mutare.\nPermite-i partenerului să mute și încearcă din nou!</string>
+    <string name="mnu_statistics">Statistici online</string>
+
+</resources>

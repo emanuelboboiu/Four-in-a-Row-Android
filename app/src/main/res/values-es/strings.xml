@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cuatro En Raya</string>
+    <string name="title_activity_connect_four">Cuatro En Raya</string>
+    <string name="cf_game_name">Cuatro En Raya</string>
+    <string name="cf_new">Iniciar</string>
+    <string name="cf_status">¡Te damos la bienvenida!</string>
+    <string name="welcome_message">¡Saludos, %1$s!</string>
+    <string name="cf_abandon_game">Retirarse</string>
+    <string name="cf_game_type0">Cambiar a juego contra la máquina</string>
+    <string name="cf_game_type1">Cambiar a juego contra un amigo</string>
+    <string name="cf_cell_already_used">%1$s ya está en uso</string>
+    <string name="cf_cell_forbidden">%1$s ¡prohibido! No hay nada por debajo</string>
+    <string name="cf_column_is_full">La columna %1$s ya está llena.</string>
+    <string name="dealer">La Máquina</string>
+    <string name="partner">Tu amigo</string>
+    <string name="my_cf_total">Tú: %1$s</string>
+    <string name="dealers_cf_total">La Máquina: %1$s</string>
+    <string name="partners_cf_total">Tu amigo: %1$s</string>
+    <string name="cf_current_move">Movimiento número  %1$s – %2$s</string>
+    <string name="cf_win">¡Felicidades, has ganado la ronda!</string>
+    <string name="cf_lose">Lástima, has perdido la ronda…</string>
+    <string name="cf_draw">Esta ronda ha terminado en empate…</string>
+    <string name="mnu_difficulty_level">Nivel…</string>
+    <string name="cf_choose_level">Escoge el nivel de dificultad</string>
+    <string name="cf_easy">Muy fácil</string>
+    <string name="cf_medium">Fácil</string>
+    <string name="cf_hard">Medio</string>
+    <string name="cf_impossible">Difícil</string>
+    <string name="action_settings">Ajustes generales</string>
+    <string name="general_score">Puntuaciones:\n%1$s %2$s – %3$s %4$s</string>
+
+    <!-- Added in Beta 3: -->
+    <string name="msg_ok">Aceptar</string>
+    <string name="msg_cancel">Cancelar</string>
+    <string name="msg_close">Cerrar</string>
+    <string name="warning">¡Advertencia!</string>
+    <string name="error">Error!</string>
+    <string name="mnu_nickname">Nombre de usuario…</string>
+    <string name="nickname_title">Nombre de usuario</string>
+    <string name="change_nickname_message">Escribe tu nuevo nombre de usuario. Será de gran utilidad que aparezca en diferentes lugares: </string>
+    <string name="change_nickname_message2">Tu nombre de usuario es %1$s.\nEscribe uno nuevo si deseas cambiarlo: </string>
+    <string name="change_nickname_hint">Escribe tu nuevo nombre de usuario aquí…</string>
+    <string name="anonymous">Anónimo</string>
+    <string name="nickname_too_short">Tu nombre de usuario debe contener por lo menos tres letras.\nPor favor, inténtalo de nuevo.</string>
+    <string name="nickname_success">Tu nombre de usuario es %1$s.\nÉste aparecerá en diferentes lugares en el juego.</string>
+    <string name="no_connection_available">No hemos detectado que exista alguna conexión disponible.\nPor favor, conecta tu dispositivo a Internet y vuelve a intentarlo.</string>
+    <string name="you">Tú</string>
+    <string name="title_activity_settings">Ajustes generales</string>
+    <string name="enable_sounds">Habilitar los sonidos</string>
+    <string name="enable_music">Habilitar la música de fondo</string>
+    <string name="enable_screen_awake">Mantener la pantalla activa</string>
+    <string name="enable_portrait_orientation">Forzar orientazión vertical</string>
+    <string name="enable_shake">Agitar para iniciar un nuevo juego</string>
+    <string name="enable_speech">Habilitar salida de voz para mejorar la accesibilidad</string>
+
+    <!-- About dialog: -->
+    <string name="mnu_about">Acerca de…</string>
+    <string name="about_title">Acerca del juego</string>
+    <string name="app_version">Cuatro en Raya versión 2.0</string>
+    <string name="app_release_date">La versión 1.0 fue lanzada el día domingo, 19 marzo 2017.\n Renombrada a Cuatro en Raya el sábado, 16 diciembre 2017</string>
+    <string name="app_last_update">Última actualización: versión 2.0, lanzada el domingo, 12 diciembre 2022</string>
+    <string name="app_creator">Programada por Emanuel Boboiu (Manu)</string>
+    <string name="phone_number">Tel. +40740203043</string>
+    <string name="email_address">Correo electrónico: android@pontes.ro</string>
+    <string name="web_address">Sitio web: www.android.pontes.ro</string>
+    <string name="app_credits1">Diseño creado por Iulian Duma</string>
+    <string name="app_credits2">Beta testing: Iulian Duma</string>
+    <string name="translators">Traducción al español por Miguel Pacheco</string>
+
+    <!-- To rate the application: -->
+    <string name="mnu_rate">Calificar…</string>
+    <string name="title_rate_app">Calificar Cuatro en Raya</string>
+    <string name="body_rate_app">Si te gusta el juego, por favor, califícalo en la tienda Google Play Store.</string>
+    <string name="bt_rate">¡Calificar ahora!</string>
+    <string name="bt_not_now">¡Más tarde!</string>
+
+    <!-- Play against computer or a partner: -->
+    <string name="play_against_computer">Jugarás contra la máquina (IA)</string>
+    <string name="play_against_partner">Jugarás contra un amigo</string>
+    <string name="mnu_game_type">Ajustes del juego…</string>
+    <string name="title_game_type_alert">Ajustes del juego</string>
+    <string name="choose_color_in_game_type_alert">Escoge tu color haciendo clic abajo en él:</string>
+    <string name="play_with_yellow">Usar amarillo</string>
+    <string name="play_with_red">Usar rojo</string>
+
+    <!-- Strings for Android TV menu: -->
+    <string name="mnu_tv_game_type">Juego…</string>
+    <string name="mnu_tv_level">Nivel…</string>
+    <string name="mnu_tv_nickname">Nombre de usuario…</string>
+    <string name="mnu_tv_settings">Ajustes</string>
+    <string name="mnu_tv_about">Acerca de…</string>
+
+    <!-- Other strings: -->
+    <string name="warning_no_available_if_started">¡Disculpa! Este diálogo no se encuentra disponible si el juego ya se ha iniciado.\nPrueba de nuevo tras finalizar el actual.</string>
+    <string name="tv_timer">%1$s:%2$s – tú %3$s%%, %4$s %5$s%%</string>
+    <string name="bt_reset_to_defaults">Restablecer el juego por defecto…</string>
+    <string name="title_default_settings">Restablecer por defecto</string>
+    <string name="body_default_settings">¿Seguro de que quieres restablecer el juego?\nÉste regresará a su estado inicial.</string>
+    <string name="msg_yes">Sí</string>
+    <string name="msg_no">No</string>
+    <string name="user_won_entire_game">¡Felicidades! ¡%1$s ha ganado todo el partido!</string>
+    <string name="partner_won_entire_game">¡Qué pena! ¡%1$s ha ganado todo el partido!</string>
+    <string name="title_abandon_game">Retirarse</string>
+    <string name="body_abandon_game">¿Estás seguro de que quieres dejar esta ronda?</string>
+    <string name="abandon_at_user_turn_message">La retirada es posible sólo cuando es tu turno.\n¡Deja que tu oponente juegue e intenta de nuevo!</string>
+    <string name="mnu_statistics">Estadísticas en línea</string>
+
+</resources>

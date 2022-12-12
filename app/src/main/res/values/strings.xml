@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Four in a Line</string>
+    <string name="title_activity_connect_four">Four in a Line</string>
+    <string name="cf_game_name">Four in a Line</string>
+    <string name="cf_new">Start</string>
+    <string name="cf_status">Welcome!</string>
+    <string name="welcome_message">Welcome %1$s!</string>
+    <string name="cf_abandon_game">Abandon</string>
+    <string name="cf_game_type0">Change to play against the Robot</string>
+    <string name="cf_game_type1">Change game to play against a human partner</string>
+    <string name="cf_cell_already_used">%1$s is already used</string>
+    <string name="cf_cell_forbidden">%1$s forbidden! There\'s nothing below.</string>
+    <string name="cf_column_is_full">The column %1$s is full.</string>
+    <string name="dealer">Robot</string>
+    <string name="partner">Partner</string>
+    <string name="my_cf_total">You: %1$s</string>
+    <string name="dealers_cf_total">Robot: %1$s</string>
+    <string name="partners_cf_total">Partner: %1$s</string>
+    <string name="cf_current_move">Move number %1$s – %2$s</string>
+    <string name="cf_win">Congrats! You won this round!</string>
+    <string name="cf_lose">Sorry, you lost this round…</string>
+    <string name="cf_draw">This round was a draw…</string>
+    <string name="mnu_difficulty_level">Level…</string>
+    <string name="cf_choose_level">Choose difficulty level</string>
+    <string name="cf_easy">Very easy</string>
+    <string name="cf_medium">Easy</string>
+    <string name="cf_hard">Medium</string>
+    <string name="cf_impossible">Hard</string>
+    <string name="action_settings">General Settings</string>
+    <string name="general_score">Score:\n%1$s %2$s – %3$s %4$s</string>
+
+    <!-- Unique ID for advertising: -->
+    <string name="banner_ad_unit_id">ca-app-pub-9705662823127450/8300046135</string>
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+
+    <!-- Added in Beta 3: -->
+    <string name="msg_ok">OK</string>
+    <string name="msg_cancel">Cancel</string>
+    <string name="msg_close">Close</string>
+    <string name="warning">Warning!</string>
+    <string name="error">Error!</string>
+    <string name="mnu_nickname">Nickname…</string>
+    <string name="nickname_title">Nickname</string>
+    <string name="change_nickname_message">Fill in your new nickname. It is useful to show it in different places: </string>
+    <string name="change_nickname_message2">Your nickname is %1$s.\nFill in a new nickname if you want to change it: </string>
+    <string name="change_nickname_hint">Write here your new nickname…</string>
+    <string name="anonymous">Anonymous</string>
+    <string name="nickname_too_short">Your nickname must contain at least three letters.\nPlease write again.</string>
+    <string name="nickname_success">Your new nickname is %1$s.\nThis will appear in different places in this game.</string>
+    <string name="no_connection_available">We detect there is no a connection available.\n Please connect your device to the Internet and try again.</string>
+    <string name="you">You</string>
+    <string name="title_activity_settings">General Settings</string>
+    <string name="enable_sounds">Enable sounds</string>
+    <string name="enable_music">Enable background music</string>
+    <string name="enable_screen_awake">Keep screen awake</string>
+    <string name="enable_portrait_orientation">Force portrait orientation</string>
+    <string name="enable_shake">Shake to start a new game</string>
+    <string name="enable_speech">Enable speech to improve accessibility</string>
+
+    <!-- About dialog: -->
+    <string name="mnu_about">About…</string>
+    <string name="about_title">About this game</string>
+    <string name="app_version">Four in a Line, version 2.0</string>
+    <string name="app_release_date">The 1.0 version was released on Sunday, 19 March 2017.\nRebranded as Four in a Line on Sathurday, 16 December 2017</string>
+    <string name="app_last_update">Last update: version 2.0, released on Saturday, 11 December 2022</string>
+    <string name="app_creator">Programmed by Emanuel Boboiu (Manu)</string>
+    <string name="phone_number">Phone: +40740203043</string>
+    <string name="email_address">E-mail: android@pontes.ro</string>
+    <string name="web_address">Web: www.android.pontes.ro</string>
+    <string name="app_credits1">Design created by Iulian Duma</string>
+    <string name="app_credits2">Beta testing: Iulian Duma</string>
+    <string name="translators">English translation: Emanuel Boboiu</string>
+
+    <!-- To rate the application: -->
+    <string name="mnu_rate">Rate…</string>
+    <string name="title_rate_app">Rate Four in a Line</string>
+    <string name="body_rate_app">If you like this game, please rate it in Google Play Store.</string>
+    <string name="bt_rate">Rate now!</string>
+    <string name="bt_not_now">Later!</string>
+
+    <!-- Play against computer or a partner: -->
+    <string name="play_against_computer">You will play against the Robot AI</string>
+    <string name="play_against_partner">You will play against a partner</string>
+    <string name="mnu_game_type">Game Settings…</string>
+    <string name="title_game_type_alert">Game Settings</string>
+    <string name="choose_color_in_game_type_alert">Choose your color clicking it below:</string>
+    <string name="play_with_yellow">Play with yellow</string>
+    <string name="play_with_red">Play with red</string>
+
+    <!-- Strings for Android TV menu: -->
+    <string name="mnu_tv_game_type">Game…</string>
+    <string name="mnu_tv_level">Level…</string>
+    <string name="mnu_tv_nickname">Nickname…</string>
+    <string name="mnu_tv_settings">Settings</string>
+    <string name="mnu_tv_about">About…</string>
+
+    <!-- Other strings: -->
+    <string name="warning_no_available_if_started">Sorry! This dialog isn\'t available if the game is already started.\nTry again after you finish this game.</string>
+    <string name="tv_timer">%1$s:%2$s – you %3$s%%, %4$s %5$s%%</string>
+    <string name="bt_reset_to_defaults">Reset the game to defaults…</string>
+    <string name="title_default_settings">Reset to defaults</string>
+    <string name="body_default_settings">Are you sure you want to reset the game?\nIt will be in its initial state.</string>
+    <string name="msg_yes">Yes</string>
+    <string name="msg_no">No</string>
+    <string name="user_won_entire_game">Congrats! %1$s won the entire match!</string>
+    <string name="partner_won_entire_game">Sorry! %1$s won the entire match!</string>
+    <string name="title_abandon_game">Abandon</string>
+    <string name="body_abandon_game">Are you sure you want to abandon this round?</string>
+    <string name="abandon_at_user_turn_message">The abandon is possible only when it\'s your turn.\nLet your partner to move and try again!</string>
+    <string name="mnu_statistics">Online Statistics</string>
+
+</resources>

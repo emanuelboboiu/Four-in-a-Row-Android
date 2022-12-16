@@ -35,7 +35,7 @@ public class Settings {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean(key, value);
         // Commit the edits!
-        editor.commit();
+        editor.apply();
     } // end save boolean.
 
     // Read boolean preference:
@@ -58,7 +58,7 @@ public class Settings {
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt(key, value);
         // Commit the edits!
-        editor.commit();
+        editor.apply();
     } // end save integer.
 
     // Read integer preference:
@@ -72,30 +72,6 @@ public class Settings {
         return value;
     } // end get integer preference from SharedPreference.
 
-    // For float values in shared preferences:
-    public void saveFloatSettings(String key, float value) {
-        // We need an Editor object to make preference changes.
-        // All objects are from android.context.Context
-        SharedPreferences settings = context
-                .getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putFloat(key, value);
-        // Commit the edits!
-        editor.commit();
-    } // end save integer.
-
-    // Read integer preference:
-    public float getFloatSettings(String key) {
-        float value;
-        // Restore preferences
-        SharedPreferences settings = context
-                .getSharedPreferences(PREFS_NAME, 0);
-        value = settings.getFloat(key, 2.2F); // a default value like the value
-        // for moderate magnitude.
-
-        return value;
-    } // end get float preference from SharedPreference.
-
     // Save a String value:
     public void saveStringSettings(String key, String value) {
         // We need an Editor object to make preference changes.
@@ -105,7 +81,7 @@ public class Settings {
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(key, value);
         // Commit the edits!
-        editor.commit();
+        editor.apply();
     } // end save String.
 
     // Read String preference:
@@ -202,7 +178,7 @@ public class Settings {
 
         MainActivity.isSound = true;
         saveBooleanSettings("isSound", MainActivity.isSound);
-        MainActivity.isMusic = true;
+        MainActivity.isMusic = false;
         saveBooleanSettings("isMusic", MainActivity.isMusic);
 
         // Make yellow user's colour:

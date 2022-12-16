@@ -38,8 +38,17 @@ import java.util.TimerTask;
 
 import ro.pontes.forinaline.R;
 
-public class MainActivity extends Activity {
+// For Google Ads:
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
+
+public class MainActivity extends Activity {
     // For music background:
     private SoundPlayer sndMusic;
 
@@ -74,8 +83,8 @@ public class MainActivity extends Activity {
     private final Context finalContext = this;
     private static long elapsedTime = 0;
 
-    // For AdMob:
-    // private AdView mAdView;
+    // Creating object of AdView for AdMob:
+    private AdView bannerAdView;
 
     // The TableLayout for grid, found in XML layout file:
     private TableLayout tlGrid;
@@ -246,7 +255,9 @@ public class MainActivity extends Activity {
 
         if (!isTV) {
             GUITools.checkIfRated(this);
-            // adMobSequence();
+            // Initializing the AdView object
+            bannerAdView = findViewById(R.id.bannerAdView);
+            adMobSequence();
         } // end if is not Android TV.
 
         // Calculate the padding in PD:
@@ -1290,5 +1301,25 @@ public class MainActivity extends Activity {
         myScore = set.getIntSettings("myScore");
         partnersScore = set.getIntSettings("partnersScore");
     } // end chargeScore() method.
+
+    // The method to generate the AdMob sequence:
+    private void adMobSequence() {
+        //initializing the Google Admob SDK
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+                // Now, because it is initialized, we load the ad:
+                loadBannerAd();
+            }
+        });
+    } // end adMobSequence().
+
+    // Now we will create a simple method to load the Banner Ad in the correct place:
+    private void loadBannerAd() {
+        // Creating  a Ad Request
+        AdRequest adRequest = new AdRequest.Builder().build();
+        // load Ad with the Request
+        bannerAdView.loadAd(adRequest);
+    } // end loadBannerAd() method.
 
 } // end MainActivity class.

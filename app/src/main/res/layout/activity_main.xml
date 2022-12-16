@@ -39,7 +39,9 @@
         <TableLayout
             android:id="@+id/tlGrid"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TableLayout>
+            android:layout_height="wrap_content">
+
+        </TableLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -128,6 +130,17 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/button_abandon" />
         </LinearLayout>
+
+        <!-- Banner AdView -->
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/bannerAdView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+
+        </com.google.android.gms.ads.AdView>
+
     </LinearLayout>
 
 </RelativeLayout>

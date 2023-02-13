@@ -34,10 +34,8 @@ public class GUITools {
     public static AlertDialog alertToShow;
 
     // A method to show an alert with title and message, just a dismiss button:
-    public static void alert(Context parentContext, String title,
-                             String message, String buttonName) {
-        Context context = new ContextThemeWrapper(parentContext,
-                R.style.MyAlertDialog);
+    public static void alert(Context parentContext, String title, String message, String buttonName) {
+        Context context = new ContextThemeWrapper(parentContext, R.style.MyAlertDialog);
         AlertDialog.Builder alert = new AlertDialog.Builder(context);
 
         // The title:
@@ -65,10 +63,9 @@ public class GUITools {
 
         alert.setView(sv);
 
-        alert.setPositiveButton(buttonName,
-                (dialog, whichButton) -> {
-                    // Do nothing yet...
-                });
+        alert.setPositiveButton(buttonName, (dialog, whichButton) -> {
+            // Do nothing yet...
+        });
         alert.show();
     } // end alert static method.
 
@@ -79,15 +76,13 @@ public class GUITools {
     } // end random method.
 
     public static boolean isAndroidTV(final Context context) {
-        UiModeManager uiModeManager = (UiModeManager) context
-                .getSystemService(Context.UI_MODE_SERVICE);
+        UiModeManager uiModeManager = (UiModeManager) context.getSystemService(Context.UI_MODE_SERVICE);
         return uiModeManager.getCurrentModeType() == Configuration.UI_MODE_TYPE_TELEVISION;
     } // end isAndroidTV() method.
 
     // A method for an alert to change nickname:
     public static void changeNickname(final Context parentContext) {
-        final Context context = new ContextThemeWrapper(parentContext,
-                R.style.MyAlertDialog);
+        final Context context = new ContextThemeWrapper(parentContext, R.style.MyAlertDialog);
         AlertDialog.Builder alert = new AlertDialog.Builder(context);
 
         // The title:
@@ -98,9 +93,7 @@ public class GUITools {
         ll.setOrientation(LinearLayout.VERTICAL);
 
         // A LayoutParams to add next items into addLLMain:
-        LinearLayout.LayoutParams llParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams llParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
         // The text view where we say about nickname:
         TextView tv = new TextView(context);
@@ -111,9 +104,7 @@ public class GUITools {
             tempMessage = context.getString(R.string.change_nickname_message);
         } else {
             // There's a nickname already set:
-            tempMessage = String.format(
-                    context.getString(R.string.change_nickname_message2),
-                    MainActivity.nickname);
+            tempMessage = String.format(context.getString(R.string.change_nickname_message2), MainActivity.nickname);
         } // end if there is already a nickname set.
         tv.setText(tempMessage);
         tv.setFocusable(true);
@@ -140,38 +131,30 @@ public class GUITools {
         alert.setView(ll);
 
         // end if OK was pressed.
-        alert.setPositiveButton(context.getString(R.string.msg_ok),
-                (dialog, whichButton) -> {
-                    // Next two line are also at the done button:
-                    String newNickname = input.getText().toString();
-                    changeNicknameFinishing(context, newNickname);
-                });
+        alert.setPositiveButton(context.getString(R.string.msg_ok), (dialog, whichButton) -> {
+            // Next two line are also at the done button:
+            String newNickname = input.getText().toString();
+            changeNicknameFinishing(context, newNickname);
+        });
 
-        alert.setNegativeButton(context.getString(R.string.msg_cancel),
-                (dialog, whichButton) -> {
-                    // Cancelled, do nothing yet.
-                });
+        alert.setNegativeButton(context.getString(R.string.msg_cancel), (dialog, whichButton) -> {
+            // Cancelled, do nothing yet.
+        });
 
         alertToShow = alert.create();
-        alertToShow.getWindow().setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+        alertToShow.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         alertToShow.show();
         // end of alert dialog with edit sequence.
     } // end changeNickname() method.
 
     // A method to check and finish the nickname changing:
-    public static void changeNicknameFinishing(final Context context,
-                                               String newNickname) {
+    public static void changeNicknameFinishing(final Context context, String newNickname) {
         // Check if the nickname is longer than two character:
         if (newNickname.length() < 3) {
-            GUITools.alert(context, context.getString(R.string.error),
-                    context.getString(R.string.nickname_too_short),
-                    context.getString(R.string.msg_ok));
+            GUITools.alert(context, context.getString(R.string.error), context.getString(R.string.nickname_too_short), context.getString(R.string.msg_ok));
         } else {
             // A good nickname was written:
-            GUITools.alert(context, context.getString(R.string.nickname_title),
-                    String.format(context.getString(R.string.nickname_success),
-                            newNickname), context.getString(R.string.msg_ok));
+            GUITools.alert(context, context.getString(R.string.nickname_title), String.format(context.getString(R.string.nickname_success), newNickname), context.getString(R.string.msg_ok));
 
             // Change also it in the game:
             MainActivity.nickname = newNickname;
@@ -185,11 +168,9 @@ public class GUITools {
     // A method for about dialog for this package:
     @SuppressLint("InflateParams")
     public static void aboutDialog(Context parentContext) {
-        final Context context = new ContextThemeWrapper(parentContext,
-                R.style.MyAlertDialog);
+        final Context context = new ContextThemeWrapper(parentContext, R.style.MyAlertDialog);
         // Inflate the about message contents
-        LayoutInflater inflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View messageView = inflater.inflate(R.layout.about_dialog, null);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -203,11 +184,8 @@ public class GUITools {
 
     // A method to rate this application:
     public static void showRateDialog(final Context parentContext) {
-        final Context context = new ContextThemeWrapper(parentContext,
-                R.style.MyAlertDialog);
-        AlertDialog.Builder builder = new AlertDialog.Builder(context).setIcon(
-                R.drawable.ic_launcher).setTitle(
-                context.getString(R.string.title_rate_app));
+        final Context context = new ContextThemeWrapper(parentContext, R.style.MyAlertDialog);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context).setIcon(R.drawable.ic_launcher).setTitle(context.getString(R.string.title_rate_app));
 
         ScrollView sv = new ScrollView(context);
         LinearLayout ll = new LinearLayout(context);
@@ -224,27 +202,22 @@ public class GUITools {
 
         builder.setView(sv);
 
-        builder.setPositiveButton(context.getString(R.string.bt_rate),
-                (dialog, which) -> {
-                    Settings set = new Settings(context);
-                    set.saveBooleanSettings("wasRated", true);
-                    String link = "market://details?id=";
-                    try {
-                        // play market available
-                        context.getPackageManager().getPackageInfo(
-                                "com.android.vending", 0);
-                        // not available
-                    } catch (PackageManager.NameNotFoundException e) {
-                        e.printStackTrace();
-                        // Should use browser
-                        link = "https://play.google.com/store/apps/details?id=";
-                    }
-                    // Starts external action
-                    context.startActivity(new Intent(
-                            Intent.ACTION_VIEW, Uri.parse(link
-                            + context.getPackageName())));
-                }).setNegativeButton(context.getString(R.string.bt_not_now),
-                null);
+        builder.setPositiveButton(context.getString(R.string.bt_rate), (dialog, which) -> {
+            Settings set = new Settings(context);
+            set.saveBooleanSettings("wasRated", true);
+            String link = "market://details?id=";
+            try {
+                // play market available
+                context.getPackageManager().getPackageInfo("com.android.vending", 0);
+                // not available
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+                // Should use browser
+                link = "https://play.google.com/store/apps/details?id=";
+            }
+            // Starts external action
+            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link + context.getPackageName())));
+        }).setNegativeButton(context.getString(R.string.bt_not_now), null);
         builder.show();
     } // end showRateDialog() method.
 
@@ -254,8 +227,7 @@ public class GUITools {
         boolean wasRated = set.getBooleanSettings("wasRated");
         if (!wasRated) {
 
-            if (MainActivity.numberOfLaunches % 6 == 0
-                    && MainActivity.numberOfLaunches > 0) {
+            if (MainActivity.numberOfLaunches % 6 == 0 && MainActivity.numberOfLaunches > 0) {
                 GUITools.showRateDialog(context);
             } // end if was x launches.
         } // end if it was not rated.
@@ -269,8 +241,7 @@ public class GUITools {
 
     // A method which detects if accessibility is enabled:
     public static boolean isAccessibilityEnabled(Context context) {
-        AccessibilityManager am = (AccessibilityManager) context
-                .getSystemService(Context.ACCESSIBILITY_SERVICE);
+        AccessibilityManager am = (AccessibilityManager) context.getSystemService(Context.ACCESSIBILITY_SERVICE);
         // boolean isAccessibilityEnabled = am.isEnabled();
         return am.isTouchExplorationEnabled();
     } // end isAccessibilityEnabled() method.

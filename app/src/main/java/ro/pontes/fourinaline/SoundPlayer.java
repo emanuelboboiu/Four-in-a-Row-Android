@@ -23,12 +23,10 @@ public class SoundPlayer {
     } // end constructor.
 
     // Play 2 sounds in sequence:
-    public static void playTwoSoundsInSequence(final String sound1,
-                                               final String sound2, final Context context) {
+    public static void playTwoSoundsInSequence(final String sound1, final String sound2, final Context context) {
         if (MainActivity.isSound) {
             // Determine which sound to be played:
-            int resID = context.getResources().getIdentifier(sound1, "raw",
-                    context.getPackageName());
+            int resID = context.getResources().getIdentifier(sound1, "raw", context.getPackageName());
             MediaPlayer mp = new MediaPlayer();
             mp = MediaPlayer.create(context, resID);
             mp.start();
@@ -36,12 +34,11 @@ public class SoundPlayer {
                 player.release();
 
                 // Another sound:
-                int resID1 = context.getResources().getIdentifier(sound2,
-                        "raw", context.getPackageName());
+                int resID1 = context.getResources().getIdentifier(sound2, "raw", context.getPackageName());
                 MediaPlayer mp1 = new MediaPlayer();
                 mp1 = MediaPlayer.create(context, resID1);
                 mp1.start();
-                mp1.setOnCompletionListener(player1 -> player1.release());
+                mp1.setOnCompletionListener(MediaPlayer::release);
                 // end another sound.
             });
 
@@ -54,8 +51,7 @@ public class SoundPlayer {
             MediaPlayer mp = new MediaPlayer();
 
             int resID;
-            resID = context.getResources().getIdentifier(fileName, "raw",
-                    context.getPackageName());
+            resID = context.getResources().getIdentifier(fileName, "raw", context.getPackageName());
             mp = MediaPlayer.create(context, resID);
             mp.start();
             isPlaying = true;
@@ -69,8 +65,7 @@ public class SoundPlayer {
     } // end static method playSimple.
 
     // A method to play a sound delayed:
-    public static void playSimpleDelayed(final Context context,
-                                         final int delay, final String fileName) {
+    public static void playSimpleDelayed(final Context context, final int delay, final String fileName) {
         if (MainActivity.isSound) {
             final Handler handler = new Handler();
             handler.postDelayed(() -> {
@@ -81,8 +76,7 @@ public class SoundPlayer {
     } // end playSimpleDelayed() method.
 
     // A method to play wait final, a static one:
-    public static void playWaitFinal(final Context context,
-                                     final String fileName) {
+    public static void playWaitFinal(final Context context, final String fileName) {
         if (MainActivity.isSound) {
             // Play in another thread, this way it is possible to be better the
             // playWait method of the SoundPlayer class:
@@ -90,14 +84,13 @@ public class SoundPlayer {
 
                 MediaPlayer mp = new MediaPlayer();
 
-                int resID = context.getResources().getIdentifier(fileName,
-                        "raw", context.getPackageName());
+                int resID = context.getResources().getIdentifier(fileName, "raw", context.getPackageName());
                 mp = MediaPlayer.create(context, resID);
 
                 mp.start();
                 // Determine the duration of the sound:
                 durationForWait = mp.getDuration();
-                mp.setOnCompletionListener(player -> player.release());
+                mp.setOnCompletionListener(MediaPlayer::release);
             }).start();
             // Try to make sleep until the sound is played:
             try {
@@ -117,8 +110,7 @@ public class SoundPlayer {
 
             // Calculate first the volume needed, depending of the percentage
             // set from general media volume:
-            AudioManager am = (AudioManager) context
-                    .getSystemService(Context.AUDIO_SERVICE);
+            AudioManager am = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
             int volumeLevel = am.getStreamVolume(AudioManager.STREAM_MUSIC);
             int maxVolume = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
             float volume = (float) volumeLevel / maxVolume;
@@ -127,8 +119,7 @@ public class SoundPlayer {
             // End calculate the current volume for background sounds.
             // GUITools.alert(context, "", ""+volume);
             int resID;
-            resID = context.getResources().getIdentifier(track, "raw",
-                    context.getPackageName());
+            resID = context.getResources().getIdentifier(track, "raw", context.getPackageName());
             mpl = MediaPlayer.create(context, resID);
 
             mpl.setVolume(volume, volume);

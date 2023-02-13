@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">4 trong 1 hàng</string>
+    <string name="title_activity_connect_four">4 trong 1 hàng</string>
+    <string name="cf_game_name">4 trong 1 hàng</string>
+    <string name="cf_new">Bắt đầu chơi</string>
+    <string name="cf_status">Chào mừng!</string>
+    <string name="welcome_message">Chào mừng %1$s!</string>
+    <string name="cf_abandon_game">Từ bỏ</string>
+    <string name="cf_game_type0">Chuyển sang chơi với máy AI</string>
+    <string name="cf_game_type1">Chuyển sang chơi với Người chơi, hai người cùng một thiết bị</string>
+    <string name="cf_cell_already_used">%1$s đã được sử dụng</string>
+    <string name="cf_cell_forbidden">%1$s Không thể ở đây! Không có gì bên dưới.</string>
+    <string name="cf_column_is_full">Cột %1$s đã đầy.</string>
+    <string name="dealer">Máy</string>
+    <string name="partner">người chơi</string>
+    <string name="my_cf_total">Bạn: %1$s</string>
+    <string name="dealers_cf_total">Máy: %1$s</string>
+    <string name="partners_cf_total">Người chơi: %1$s</string>
+    <string name="cf_current_move">Số nước đi %1$s – %2$s</string>
+    <string name="cf_win">Chúc mừng! Bạn đã thắng ván này!</string>
+    <string name="cf_lose">Ôi không, bạn đã thua ván này…</string>
+    <string name="cf_draw">Ván này hòa…</string>
+    <string name="mnu_difficulty_level">Mức độ…</string>
+    <string name="cf_choose_level">Chọn mức độ khó</string>
+    <string name="cf_easy">Rất dễ</string>
+    <string name="cf_medium">Dễ</string>
+    <string name="cf_hard">Bình thường</string>
+    <string name="cf_impossible">Khó</string>
+    <string name="action_settings">Cài đặt chung</string>
+    <string name="general_score">Điểm:\n%1$s %2$s – %3$s %4$s</string>
+
+    <!-- Unique ID for advertising: -->
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id">ca-app-pub-9705662823127450/2745676298</string>
+    <string name="banner_ad_application_id">ca-app-pub-9705662823127450~1268943097</string>
+
+    <!-- Added in Beta 3: -->
+    <string name="msg_ok">OK</string>
+    <string name="msg_cancel">Hủy</string>
+    <string name="msg_close">Đóng</string>
+    <string name="warning">Cảnh báo!</string>
+    <string name="error">Lỗi!</string>
+    <string name="mnu_nickname">Tên…</string>
+    <string name="nickname_title">Tên</string>
+    <string name="change_nickname_message">Đặt tên của bạn. Nó khá cần thiết để hiển thị nó ở những nơi khác nhau trong trò chơi: </string>
+    <string name="change_nickname_message2">Tên của bạn là %1$s.\nĐiền tên mới nếu muốn đổi: </string>
+    <string name="change_nickname_hint">Viết vào đây tên của bạn…</string>
+    <string name="anonymous">Vô danh</string>
+    <string name="nickname_too_short">Tên của bạn phải chứa ít nhất ba chữ cái.\nVui lòng viết lại.</string>
+    <string name="nickname_success">Xin chào %1$s.\nBây giờ tôi sẽ gọi bạn bằng tên này của bạn.</string>
+    <string name="no_connection_available">Tôi phát hiện không có kết nối.\n Vui lòng kết nối thiết bị của bạn với Internet và thử lại.</string>
+    <string name="you">Bạn</string>
+    <string name="title_activity_settings">Cài đặt chung</string>
+    <string name="enable_sounds">Bật âm thanh</string>
+    <string name="enable_music">Bật nhạc nền</string>
+    <string name="enable_screen_awake">Giữ cho màn hình luôn sáng</string>
+    <string name="enable_portrait_orientation">Buộc màn hình ở chế độ dọc</string>
+    <string name="enable_shake">Lắc thiết bị để bắt đầu một ván chơi mới</string>
+    <string name="enable_speech">Bật giọng nói để cải thiện trợ năng</string>
+
+    <!-- About dialog: -->
+    <string name="mnu_about">Giới thiệu…</string>
+    <string name="about_title">Thông tin về trò chơi này</string>
+    <string name="app_version">Bốn trong một hàng, phiên bản 2.1</string>
+    <string name="app_release_date">Phiên bản 1.0 được phát hành vào Chủ nhật, ngày 19 tháng 3 năm 2017.\nĐổi tên thành Four in a Line vào Thứ Bảy, ngày 16 tháng 12 năm 2017</string>
+    <string name="app_last_update">Lần cập nhật cuối cùng: phiên bản 2.1 thêm tiếng việt, phát hành vào Thứ sáu, ngày 10 tháng 2 năm 2023</string>
+    <string name="app_creator">Lập trình bởi Emanuel Boboiu (Manu)</string>
+    <string name="phone_number">Số điện thoại: +40740203043</string>
+    <string name="email_address">E-mail: android@pontes.ro</string>
+    <string name="web_address">Web: www.android.pontes.ro</string>
+    <string name="app_credits1">Thiết kế được tạo bởi Iulian Duma</string>
+    <string name="app_credits2">Beta testing: Iulian Duma</string>
+    <string name="translators">Thêm tiếng việt bởi Đào Đức Trung</string>
+
+    <!-- To rate the application: -->
+    <string name="mnu_rate">Đánh giá trò chơi…</string>
+    <string name="title_rate_app">Đánh giá trò chơi</string>
+    <string name="body_rate_app">Nếu bạn thích trò chơi này, vui lòng đánh giá nó trong Cửa hàng Google Play. Làm vậy thì Game Translator hay lập trình viên sẽ cảm thấy vui và làm tốt hơn nữa.</string>
+    <string name="bt_rate">Được. Game hay, đánh giá luôn!</string>
+    <string name="bt_not_now">Từ từ, để sau!</string>
+
+    <!-- Play against computer or a partner: -->
+    <string name="play_against_computer">Bạn sẽ đấu với Máy AI</string>
+    <string name="play_against_partner">Bạn sẽ đấu với một người chơi có cùng thiết bị với bạn</string>
+    <string name="mnu_game_type">Cài đặt trò chơi…</string>
+    <string name="title_game_type_alert">Cài đặt trò chơi</string>
+    <string name="choose_color_in_game_type_alert">Chọn màu sắc của bạn nhấp vào nó dưới đây:</string>
+    <string name="play_with_yellow">Chơi với màu vàng</string>
+    <string name="play_with_red">Chơi với màu đỏ</string>
+
+    <!-- Strings for Android TV menu: -->
+    <string name="mnu_tv_game_type">Loại chơi…</string>
+    <string name="mnu_tv_level">Mức độ…</string>
+    <string name="mnu_tv_nickname">Tên…</string>
+    <string name="mnu_tv_settings">Cài đặt</string>
+    <string name="mnu_tv_about">Giới thiệu…</string>
+
+    <!-- Other strings: -->
+    <string name="warning_no_available_if_started">Xin lỗi! Hộp thoại này không khả dụng nếu ván chơi đã bắt đầu.\nHãy thử lại sau khi bạn hoàn thành ván chơi này.</string>
+    <string name="tv_timer">%1$s:%2$s – Bạn %3$s%%, %4$s %5$s%%</string>
+    <string name="bt_reset_to_defaults">Đặt lại trò chơi về mặc định…</string>
+    <string name="title_default_settings">Đặt lại về mặc định</string>
+    <string name="body_default_settings">Bạn có chắc chắn muốn thiết lập lại trò chơi?\nNó sẽ ở trạng thái ban đầu.</string>
+    <string name="msg_yes">Có</string>
+    <string name="msg_no">Không</string>
+    <string name="user_won_entire_game">chúc mừng! %1$s thắng cả trận!</string>
+    <string name="partner_won_entire_game">Ôi không! %1$s thắng cả trận!</string>
+    <string name="title_abandon_game">Từ bỏ</string>
+    <string name="body_abandon_game">Bạn có chắc chắn muốn bỏ ván này?</string>
+    <string name="abandon_at_user_turn_message">Việc từ bỏ chỉ có thể xảy ra khi đến lượt bạn.\nHãy để người chơi cùng bạn đi và thử lại!</string>
+    <string name="mnu_statistics">Thống kê trực tuyến</string>
+
+</resources>

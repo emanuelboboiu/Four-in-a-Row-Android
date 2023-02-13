@@ -53,41 +53,37 @@ public class Board {
         return columnCounts[column] < height;
     }
 
-    public boolean makeMovePlayer(int column) {
-        return makeMove(column, true);
+    public void makeMovePlayer(int column) {
+        makeMove(column, true);
     }
 
-    public boolean makeMoveAI(int column) {
-        return makeMove(column, false);
+    public void makeMoveAI(int column) {
+        makeMove(column, false);
     }
 
-    public boolean undoMovePlayer(int column) {
-        return undoMove(column, true);
+    public void undoMovePlayer(int column) {
+        undoMove(column, true);
     }
 
-    public boolean undoMoveAI(int column) {
-        return undoMove(column, false);
+    public void undoMoveAI(int column) {
+        undoMove(column, false);
     }
 
-    boolean makeMove(int column, boolean player) {
+    void makeMove(int column, boolean player) {
         if (columnCounts[column] < height) {
             byte sign = player ? PLAYER : AI;
             board[column][columnCounts[column]++] = sign;
-            return true;
         }
-        return false;
     }
 
-    boolean undoMove(int column, boolean player) {
+    void undoMove(int column, boolean player) {
         if (columnCounts[column] > 0) {
             byte sign = player ? PLAYER : AI;
             if (board[column][columnCounts[column] - 1] == sign) {
                 board[column][columnCounts[column] - 1] = NOBODY;
                 columnCounts[column]--;
-                return true;
             }
         }
-        return false;
     }
 
     public int getWidth() {

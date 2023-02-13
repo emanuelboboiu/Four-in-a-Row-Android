@@ -32,23 +32,21 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import java.lang.ref.WeakReference;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import ro.pontes.forinaline.R;
-
-// For Google Ads:
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
+import java.lang.ref.WeakReference;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import ro.pontes.forinaline.R;
+
 
 public class MainActivity extends Activity {
+
     // For music background:
     private SoundPlayer sndMusic;
 
@@ -60,6 +58,7 @@ public class MainActivity extends Activity {
     public static boolean isStarted = false;
     public static boolean isTV = false;
     public static boolean isSpeech = false;
+    public static boolean isAccessibility = false;
     public static boolean isSound = true;
     public static boolean isMusic = true;
     public static int soundMusicPercentage = 75;
@@ -132,7 +131,7 @@ public class MainActivity extends Activity {
         WeakReference<MainActivity> cfActivity;
 
         MyHandler(MainActivity aCfActivity) {
-            cfActivity = new WeakReference<MainActivity>(aCfActivity);
+            cfActivity = new WeakReference<>(aCfActivity);
         }
     } // end static class for handler.
 
@@ -163,6 +162,9 @@ public class MainActivity extends Activity {
         Settings set = new Settings(this);
         set.chargeSettings();
 
+        // Detect if is accessibility to set clickable all the squares:
+        MainActivity.isAccessibility = GUITools.isAccessibilityEnabled(this);
+
         // Determine if it's a TV or not:
         if (GUITools.isAndroidTV(this)) {
             isTV = true;
@@ -179,20 +181,20 @@ public class MainActivity extends Activity {
         }
 
         // Get some global text views:
-        tvCfStatus = (TextView) findViewById(R.id.tvCfStatus);
+        tvCfStatus = findViewById(R.id.tvCfStatus);
 
         // Charge the chronometer if it isn't already charged:
         if (chron == null) {
-            chron = (Chronometer) findViewById(R.id.tvGameTimer);
+            chron = findViewById(R.id.tvGameTimer);
         } // end if chronometer is null.
 
         /*
          * Get the ImageButtons into their global variables, we will use them to
          * enable or disable periodically:
          */
-        btCfNew = (ImageButton) findViewById(R.id.btCfNew);
-        btCfAbandon = (ImageButton) findViewById(R.id.cfAbandon);
-        btCfChangeGameType = (ImageButton) findViewById(R.id.cfChangeGameType);
+        btCfNew = findViewById(R.id.btCfNew);
+        btCfAbandon = findViewById(R.id.cfAbandon);
+        btCfChangeGameType = findViewById(R.id.cfChangeGameType);
 
         // Add listener for long click on start button:
         btCfNew.setOnLongClickListener(view -> {
@@ -231,7 +233,7 @@ public class MainActivity extends Activity {
         updateTextViewsForTotals();
 
         // Get the TableLayout tlGrid:
-        tlGrid = (TableLayout) findViewById(R.id.tlGrid);
+        tlGrid = findViewById(R.id.tlGrid);
 
         // Make things if it's an old game:
         if (isStarted) {
@@ -241,16 +243,14 @@ public class MainActivity extends Activity {
             // Change the tvStatus to show welcome name:
             // only if nickname exists:
             if (nickname != null) {
-                String welcomeMessage = String.format(
-                        getString(R.string.welcome_message), nickname);
+                String welcomeMessage = String.format(getString(R.string.welcome_message), nickname);
                 updateStatus(welcomeMessage);
             } // end if nickname exists.
         } // end if it is not started.
 
         // To keep screen awake:
         if (isWakeLock) {
-            getWindow()
-                    .addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         } // end wake lock.
 
         if (!isTV) {
@@ -283,8 +283,7 @@ public class MainActivity extends Activity {
                      */
                     if (gameType == 0 && isTurn == 2 && !isAIMoving) {
                         isAIMoving = true;
-                        mHandler.sendEmptyMessageDelayed(
-                                MAKE_AI_MOVE_VIA_HANDLER, 500);
+                        mHandler.sendEmptyMessageDelayed(MAKE_AI_MOVE_VIA_HANDLER, 500);
                     } // end event for dealer turn to make AI move.
                 });
             }
@@ -387,14 +386,11 @@ public class MainActivity extends Activity {
     private void chooseDifficultyLevel() {
         AlertDialog levelDialog;
         // Creating and Building the Dialog:
-        final Context context = new ContextThemeWrapper(this,
-                R.style.MyAlertDialog);
+        final Context context = new ContextThemeWrapper(this, R.style.MyAlertDialog);
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
         // Strings to Show In Dialog with Radio Buttons
-        final CharSequence[] items = {getString(R.string.cf_easy),
-                getString(R.string.cf_medium), getString(R.string.cf_hard),
-                getString(R.string.cf_impossible)};
+        final CharSequence[] items = {getString(R.string.cf_easy), getString(R.string.cf_medium), getString(R.string.cf_hard), getString(R.string.cf_impossible)};
         final int[] cfLevels = {3, 5, 7, 8};
 
         builder.setTitle(getString(R.string.cf_choose_level));
@@ -406,26 +402,24 @@ public class MainActivity extends Activity {
                 break;
             }
         } // end for search current position of the current level chosen before.
-        builder.setSingleChoiceItems(items, cfLevelPosition,
-                (dialog, item) -> {
+        builder.setSingleChoiceItems(items, cfLevelPosition, (dialog, item) -> {
 
-                    switch (item) {
-                        case 0:
-                        case 1:
-                        case 2:
-                        case 3:
-                            MainActivity.cfLevel = cfLevels[item];
-                            break;
-                    } // end switch.
-                });
+            switch (item) {
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                    MainActivity.cfLevel = cfLevels[item];
+                    break;
+            } // end switch.
+        });
 
-        builder.setPositiveButton(getString(R.string.msg_ok),
-                (dialog, whichButton) -> {
-                    Settings set = new Settings(context);
-                    set.saveIntSettings("cfLevel", cfLevel);
-                    ConnectFourAI.MAX_DEPTH = MainActivity.cfLevel;
-                    //
-                });
+        builder.setPositiveButton(getString(R.string.msg_ok), (dialog, whichButton) -> {
+            Settings set = new Settings(context);
+            set.saveIntSettings("cfLevel", cfLevel);
+            ConnectFourAI.MAX_DEPTH = MainActivity.cfLevel;
+            //
+        });
         levelDialog = builder.create();
         levelDialog.show();
     } // end chooseDifficultyLevel() method.
@@ -444,8 +438,7 @@ public class MainActivity extends Activity {
             String tempTitle = getString(R.string.title_abandon_game);
             String tempBody = getString(R.string.body_abandon_game);
 
-            Context context = new ContextThemeWrapper(this,
-                    R.style.MyAlertDialog);
+            Context context = new ContextThemeWrapper(this, R.style.MyAlertDialog);
 
             AlertDialog.Builder alert = new AlertDialog.Builder(context);
             alert.setTitle(tempTitle);
@@ -464,19 +457,16 @@ public class MainActivity extends Activity {
 
             alert.setView(sv);
 
-            alert.setPositiveButton(R.string.msg_yes,
-                    (dialog, whichButton) -> {
-                        // Things when yes was pressed:
-                        isStarted = false;
-                        isAbandon = true;
-                        checkForFinish();
-                    }).setNegativeButton(R.string.msg_no, null).show();
+            alert.setPositiveButton(R.string.msg_yes, (dialog, whichButton) -> {
+                // Things when yes was pressed:
+                isStarted = false;
+                isAbandon = true;
+                checkForFinish();
+            }).setNegativeButton(R.string.msg_no, null).show();
         } // end if it's user's turn:
         else {
             // If it's the partner's turn, abandon it's not possible:
-            GUITools.alert(this, getString(R.string.warning),
-                    getString(R.string.abandon_at_user_turn_message),
-                    getString(R.string.msg_ok));
+            GUITools.alert(this, getString(R.string.warning), getString(R.string.abandon_at_user_turn_message), getString(R.string.msg_ok));
         } // end if it's not the user's turn.
     } // end abandonGame() method.
 
@@ -487,16 +477,14 @@ public class MainActivity extends Activity {
             gameType = 0;
             // Change the second value of the string aPossession into dealer:
             aPossession[2] = getString(R.string.dealer);
-            btCfChangeGameType
-                    .setContentDescription(getString(R.string.cf_game_type1));
+            btCfChangeGameType.setContentDescription(getString(R.string.cf_game_type1));
             btCfChangeGameType.setImageResource(R.drawable.button_partner);
             // Announce this change:
             updateStatus(getString(R.string.play_against_computer));
         } else {
             gameType = 1;
             aPossession[2] = getString(R.string.partner);
-            btCfChangeGameType
-                    .setContentDescription(getString(R.string.cf_game_type0));
+            btCfChangeGameType.setContentDescription(getString(R.string.cf_game_type0));
             btCfChangeGameType.setImageResource(R.drawable.button_computer);
             updateStatus(getString(R.string.play_against_partner));
         }
@@ -517,14 +505,12 @@ public class MainActivity extends Activity {
          * height of a TextView, a cell of the table will be 40% divided by
          * number of rows.
          */
-        boolean isPortrait = true;
+
         /*
          * If height is greater than width, it means it is portrait, otherwise
          * it is landscape:
          */
-        if (screenWidth > screenHeight) {
-            isPortrait = false;
-        }
+        boolean isPortrait = screenWidth <= screenHeight;
 
         // Determine the size of a cell in table depending of the orientation:
         // The dimensions for shapes:
@@ -544,13 +530,11 @@ public class MainActivity extends Activity {
         // Fill the bitmap array with resized images:
         for (int i = 0; i < 3; i++) {
             String shapeName = "cell" + i;
-            int resId = getResources().getIdentifier(shapeName, "drawable",
-                    getPackageName());
+            int resId = getResources().getIdentifier(shapeName, "drawable", getPackageName());
 
             // Get the resized image:
             Bitmap bmp = BitmapFactory.decodeResource(getResources(), resId);
-            Bitmap resizedbitmap = Bitmap.createScaledBitmap(bmp, ivWidth,
-                    ivHeight, true);
+            Bitmap resizedbitmap = Bitmap.createScaledBitmap(bmp, ivWidth, ivHeight, true);
             resizedImages[i] = resizedbitmap;
         } // end for.
 
@@ -644,14 +628,14 @@ public class MainActivity extends Activity {
                 final int ivId = 1000 + ((10 * i) + j);
                 iv.setId(ivId);
 
-                // Make it focusable only if it is the upper row:
-                if (i == rows - 1) {
+                // Make it focusable only if it is the upper row or accessibility:
+                if (i == rows - 1 || isAccessibility) {
                     iv.setFocusable(true);
                     iv.setBackgroundColor(R.drawable.selector_background_selected);
                     // Something about focus for Android TV:
                     iv.setOnFocusChangeListener((view, hasFocus) -> {
                         // Find the current element by ID:
-                        ImageView tempIv = (ImageView) findViewById(ivId);
+                        ImageView tempIv = findViewById(ivId);
                         if (hasFocus) {
                             tempIv.setAlpha(0.7F);
                         } else {
@@ -660,7 +644,7 @@ public class MainActivity extends Activity {
                     });
                     // End focus changed.
 
-                } else {
+                } else { // not first row and not accessibility:
                     iv.setFocusable(false);
                 }
                 iv.setClickable(true);
@@ -681,12 +665,9 @@ public class MainActivity extends Activity {
                         } // end for to determine the aiRow.
                         /* If it is still -1, it means no column available: */
                         if (mRow == -1) {
-                            SoundPlayer.playSimple(finalContext,
-                                    "forbidden");
+                            SoundPlayer.playSimple(finalContext, "forbidden");
                             String columns = "ABCDEFGHIJ";
-                            speak.say(String.format(
-                                    getString(R.string.cf_column_is_full),
-                                    columns.charAt(y)), true);
+                            speak.say(String.format(getString(R.string.cf_column_is_full), columns.charAt(y)), true);
                         } // end if column is full.
                         else {
                             /*
@@ -708,7 +689,7 @@ public class MainActivity extends Activity {
     // A method to change a cell in grid depending of the game status:
     private void changeCell(int cellId, int x, int y) {
         if (isStarted) {
-            ImageView iv = (ImageView) findViewById(cellId);
+            ImageView iv = findViewById(cellId);
             String cellName = iv.getContentDescription().toString();
 
             // Check if there is still a 0 value, nothing yet:
@@ -746,8 +727,7 @@ public class MainActivity extends Activity {
                     if (gameType == 0 && isTurn == 1) {
                         // Randomize a little the level:
                         int min = MainActivity.cfLevel - 1;
-                        int max = (MainActivity.cfLevel < 8) ? (MainActivity.cfLevel + 1)
-                                : MainActivity.cfLevel;
+                        int max = (MainActivity.cfLevel < 8) ? (MainActivity.cfLevel + 1) : MainActivity.cfLevel;
                         ConnectFourAI.MAX_DEPTH = GUITools.random(min, max);
                         board.makeMovePlayer(y);
                     }
@@ -764,14 +744,11 @@ public class MainActivity extends Activity {
                     }
                 } else {
                     SoundPlayer.playSimple(this, "forbidden");
-                    updateStatus(String.format(
-                            getString(R.string.cf_cell_forbidden), cellName));
+                    updateStatus(String.format(getString(R.string.cf_cell_forbidden), cellName));
                 } // end if there is not something below or y == 0.
             } else {
                 SoundPlayer.playSimple(this, "forbidden");
-                speak.say(String.format(
-                                getString(R.string.cf_cell_already_used), cellName),
-                        true);
+                speak.say(String.format(getString(R.string.cf_cell_already_used), cellName), true);
             } // end if there is already something there, the value in grid is
             // greater than 0, in fact 1 or 2.
         } else {
@@ -785,13 +762,12 @@ public class MainActivity extends Activity {
         long blinkInterval = 150;
         long blinkDuration = (numberOfTimesToBlink + 1) * blinkInterval;
 
-        final ImageView blinkingImageView = (ImageView) findViewById(cellId);
+        final ImageView blinkingImageView = findViewById(cellId);
 
         blinkingImageView.setImageBitmap(resizedImages[who]);
         blinkingImageView.setTag("yourFirstImage");
 
-        final CountDownTimer blinkTimer = new CountDownTimer(blinkDuration,
-                blinkInterval) {
+        final CountDownTimer blinkTimer = new CountDownTimer(blinkDuration, blinkInterval) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if (blinkingImageView.getTag() == "yourFirstImage") {
@@ -827,8 +803,7 @@ public class MainActivity extends Activity {
                 aiGlobalColumn = ai.makeTurn();
 
                 // Make now the move via handler:
-                mHandler.sendEmptyMessageDelayed(
-                        MAKE_CHANGE_CELL_VIA_HANDLER, 2000);
+                mHandler.sendEmptyMessageDelayed(MAKE_CHANGE_CELL_VIA_HANDLER, 2000);
             }).start();
             // end thread to do AI move.
         } // end if is started.
@@ -926,15 +901,12 @@ public class MainActivity extends Activity {
         String tempMessage = "";
         if (myScore >= SCORE_LIMIT) {
             isEntireGameFinished = true;
-            tempMessage = String.format(
-                    getString(R.string.user_won_entire_game), aPossession[1]);
+            tempMessage = String.format(getString(R.string.user_won_entire_game), aPossession[1]);
             SoundPlayer.playSimpleDelayed(this, 1500, "win_entire_game");
         } // end if user won the entire game.
         else if (partnersScore >= SCORE_LIMIT) {
             isEntireGameFinished = true;
-            tempMessage = String
-                    .format(getString(R.string.partner_won_entire_game),
-                            aPossession[2]);
+            tempMessage = String.format(getString(R.string.partner_won_entire_game), aPossession[2]);
             SoundPlayer.playSimpleDelayed(this, 1500, "lose_entire_game");
         } // end if partner won the entire game.
 
@@ -1003,9 +975,7 @@ public class MainActivity extends Activity {
             outerloop:
             for (int i = 0; i < rows - 3; i++) {
                 for (int j = 0; j < cols - 3; j++) {
-                    if (grid[i][j] > 0 && grid[i][j] == grid[i + 1][j + 1]
-                            && grid[i][j] == grid[i + 2][j + 2]
-                            && grid[i][j] == grid[i + 3][j + 3]) {
+                    if (grid[i][j] > 0 && grid[i][j] == grid[i + 1][j + 1] && grid[i][j] == grid[i + 2][j + 2] && grid[i][j] == grid[i + 3][j + 3]) {
                         who = grid[i][j]; // we detect who was with this
                         // connection done.
                         isStarted = false;
@@ -1021,9 +991,7 @@ public class MainActivity extends Activity {
             outerloop:
             for (int i = 0; i < rows - 3; i++) {
                 for (int j = 3; j < cols; j++) {
-                    if (grid[i][j] > 0 && grid[i][j] == grid[i + 1][j - 1]
-                            && grid[i][j] == grid[i + 2][j - 2]
-                            && grid[i][j] == grid[i + 3][j - 3]) {
+                    if (grid[i][j] > 0 && grid[i][j] == grid[i + 1][j - 1] && grid[i][j] == grid[i + 2][j - 2] && grid[i][j] == grid[i + 3][j - 3]) {
                         who = grid[i][j]; // we detect who was with four this
                         // connection done.
                         isStarted = false;
@@ -1053,9 +1021,8 @@ public class MainActivity extends Activity {
 
         // Change the general score TextView:
         // Get the TextView:
-        TextView tvGeneralScore = (TextView) findViewById(R.id.tvGeneralScore);
-        tvGeneralScore.setText(String.format(getString(R.string.general_score),
-                aPossession[1], "" + myScore, aPossession[2], "" + partnersScore));
+        TextView tvGeneralScore = findViewById(R.id.tvGeneralScore);
+        tvGeneralScore.setText(String.format(getString(R.string.general_score), aPossession[1], "" + myScore, aPossession[2], "" + partnersScore));
     } // end updateTextViews with totals in hands method.
 
     // A method to update the Status TextView:
@@ -1066,8 +1033,7 @@ public class MainActivity extends Activity {
 
     // A method to update the status with number of moves message:
     private void updateNumberOfMovesStatus() {
-        String text = String.format(getString(R.string.cf_current_move), ""
-                + numberOfMoves, aPossession[isTurn]);
+        String text = String.format(getString(R.string.cf_current_move), "" + numberOfMoves, aPossession[isTurn]);
         tvCfStatus.setText(text);
     } // end update status with number of moves message.
 
@@ -1089,14 +1055,12 @@ public class MainActivity extends Activity {
         if (gameType == 0) {
             // Change the second value of the string aPossession into dealer:
             aPossession[2] = getString(R.string.dealer);
-            btCfChangeGameType
-                    .setContentDescription(getString(R.string.cf_game_type1));
+            btCfChangeGameType.setContentDescription(getString(R.string.cf_game_type1));
             btCfChangeGameType.setImageResource(R.drawable.button_partner);
         } else {
             // Change the second value of the string aPossession into partner:
             aPossession[2] = getString(R.string.partner);
-            btCfChangeGameType
-                    .setContentDescription(getString(R.string.cf_game_type0));
+            btCfChangeGameType.setContentDescription(getString(R.string.cf_game_type0));
             btCfChangeGameType.setImageResource(R.drawable.button_computer);
         }
     } // end enableOrDisableButtons.
@@ -1104,17 +1068,14 @@ public class MainActivity extends Activity {
     // A method to set the game type, choose colour etc.::
     private void setGameType() {
         // This is only if the game is not started:
-        final Context context = new ContextThemeWrapper(this,
-                R.style.MyAlertDialog);
+        final Context context = new ContextThemeWrapper(this, R.style.MyAlertDialog);
 
         if (!isStarted) {
             // We save current colours:
             isReversedColorsTemporary = isReversedColors;
 
-            // A LayoutParams to add items as match_parrent for width:
-            LinearLayout.LayoutParams llParams = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
+            // A LayoutParams to add items as match_parent for width:
+            LinearLayout.LayoutParams llParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
             // We create first a layout for this action:
             LinearLayout addLLMain = new LinearLayout(context);
@@ -1140,9 +1101,7 @@ public class MainActivity extends Activity {
             llLeft.setGravity(Gravity.CENTER_HORIZONTAL);
 
             // A LayoutParams to add items as wrap_content:
-            LinearLayout.LayoutParams llParamsWrap = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
+            LinearLayout.LayoutParams llParamsWrap = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
             // First ImageView as Button:
             final ImageView iv = new ImageView(this);
@@ -1206,8 +1165,7 @@ public class MainActivity extends Activity {
              * be 1, we have llParams2:
              */
 
-            LinearLayout.LayoutParams llParams2 = new LinearLayout.LayoutParams(
-                    LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            LinearLayout.LayoutParams llParams2 = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
             llParams2.weight = 1.0f;
 
             llImageViews.addView(llLeft, llParams2);
@@ -1223,30 +1181,25 @@ public class MainActivity extends Activity {
 
             // The buttons can be add now and cancel!:
             // end if OK was pressed.
-            alertDialog.setPositiveButton(R.string.msg_ok,
-                    (dialog, whichButton) -> {
-                        // Here code for OK:
-                        isReversedColors = isReversedColorsTemporary;
-                        createResizedImages();
-                        Settings set = new Settings(finalContext);
-                        set.saveBooleanSettings("isReversedColors",
-                                isReversedColors);
-                    });
+            alertDialog.setPositiveButton(R.string.msg_ok, (dialog, whichButton) -> {
+                // Here code for OK:
+                isReversedColors = isReversedColorsTemporary;
+                createResizedImages();
+                Settings set = new Settings(finalContext);
+                set.saveBooleanSettings("isReversedColors", isReversedColors);
+            });
 
-            alertDialog.setNegativeButton(R.string.msg_cancel,
-                    (dialog, whichButton) -> {
-                        // Cancelled:
-                        // Do nothing.
-                    });
+            alertDialog.setNegativeButton(R.string.msg_cancel, (dialog, whichButton) -> {
+                // Cancelled:
+                // Do nothing.
+            });
 
             alertDialog.create();
             alertDialog.show();
         } // end if the game isn't started.
         else {
             // The game is started, show a warning alert:
-            GUITools.alert(this, getString(R.string.warning),
-                    getString(R.string.warning_no_available_if_started),
-                    getString(R.string.msg_ok));
+            GUITools.alert(this, getString(R.string.warning), getString(R.string.warning_no_available_if_started), getString(R.string.msg_ok));
         } // end if the game is already started.
     } // end setGameType() method.
 

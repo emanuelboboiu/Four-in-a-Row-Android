@@ -55,14 +55,12 @@ public class ConnectFourAI {
         // To determine the value of a move, first make the move, estimate that
         // state and then undo the move again.
         board.makeMoveAI(column);
-        double val = alphabeta(MAX_DEPTH, Integer.MIN_VALUE, Integer.MAX_VALUE,
-                false);
+        double val = alphabeta(MAX_DEPTH, Integer.MIN_VALUE, Integer.MAX_VALUE, false);
         board.undoMoveAI(column);
         return val;
     }
 
-    double alphabeta(int depth, double alpha, double beta,
-                     boolean maximizingPlayer) {
+    double alphabeta(int depth, double alpha, double beta, boolean maximizingPlayer) {
         boolean hasWinner = board.hasWinner();
         // All these conditions lead to a termination of the recursion
         if (depth == 0 || hasWinner) {
@@ -89,8 +87,7 @@ public class ConnectFourAI {
             for (int column = 0; column < board.getWidth(); column++) {
                 if (board.isValidMove(column)) {
                     board.makeMoveAI(column);
-                    alpha = Math.max(alpha,
-                            alphabeta(depth - 1, alpha, beta, false));
+                    alpha = Math.max(alpha, alphabeta(depth - 1, alpha, beta, false));
                     board.undoMoveAI(column);
                     if (beta <= alpha) {
                         break;
@@ -102,8 +99,7 @@ public class ConnectFourAI {
             for (int column = 0; column < board.getWidth(); column++) {
                 if (board.isValidMove(column)) {
                     board.makeMovePlayer(column);
-                    beta = Math.min(beta,
-                            alphabeta(depth - 1, alpha, beta, true));
+                    beta = Math.min(beta, alphabeta(depth - 1, alpha, beta, true));
                     board.undoMovePlayer(column);
                     if (beta <= alpha) {
                         break;

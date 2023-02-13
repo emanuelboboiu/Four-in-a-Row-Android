@@ -18,8 +18,7 @@ public class Settings {
     public boolean isPreference(String key) {
         boolean value;
         // Restore preferences
-        SharedPreferences settings = context
-                .getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, 0);
         value = settings.contains(key);
         return value;
     } // end detect if a preference exists or not.
@@ -30,8 +29,7 @@ public class Settings {
     public void saveBooleanSettings(String key, boolean value) {
         // We need an Editor object to make preference changes.
         // All objects are from android.context.Context
-        SharedPreferences settings = context
-                .getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean(key, value);
         // Commit the edits!
@@ -42,8 +40,7 @@ public class Settings {
     public boolean getBooleanSettings(String key) {
         boolean value;
         // Restore preferences
-        SharedPreferences settings = context
-                .getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, 0);
         value = settings.getBoolean(key, false);
 
         return value;
@@ -53,8 +50,7 @@ public class Settings {
     public void saveIntSettings(String key, int value) {
         // We need an Editor object to make preference changes.
         // All objects are from android.context.Context
-        SharedPreferences settings = context
-                .getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt(key, value);
         // Commit the edits!
@@ -65,8 +61,7 @@ public class Settings {
     public int getIntSettings(String key) {
         int value;
         // Restore preferences
-        SharedPreferences settings = context
-                .getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, 0);
         value = settings.getInt(key, 0);
 
         return value;
@@ -76,8 +71,7 @@ public class Settings {
     public void saveStringSettings(String key, String value) {
         // We need an Editor object to make preference changes.
         // All objects are from android.context.Context
-        SharedPreferences settings = context
-                .getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(key, value);
         // Commit the edits!
@@ -88,8 +82,7 @@ public class Settings {
     public String getStringSettings(String key) {
         String value;
         // Restore preferences
-        SharedPreferences settings = context
-                .getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, 0);
         value = settings.getString(key, null);
 
         return value;
@@ -99,8 +92,7 @@ public class Settings {
     // A method to detect if a preference exist or not:
     public boolean preferenceExists(String key) {
         // Restore preferences
-        SharedPreferences settings = context
-                .getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, 0);
         return settings.contains(key);
     } // end detect if a preference exists or not.
 
@@ -112,7 +104,7 @@ public class Settings {
 
         if (!isNotFirstRunning) {
             saveBooleanSettings("isFirstRunning", true);
-            // Make default values in SharedPrefferences:
+            // Make default values in SharedPreferences:
             setDefaultSettings();
         }
 
@@ -177,22 +169,21 @@ public class Settings {
         saveBooleanSettings("isSpeech", MainActivity.isSpeech);
 
         MainActivity.isSound = true;
-        saveBooleanSettings("isSound", MainActivity.isSound);
+        saveBooleanSettings("isSound", true);
         MainActivity.isMusic = false;
-        saveBooleanSettings("isMusic", MainActivity.isMusic);
+        saveBooleanSettings("isMusic", false);
 
         // Make yellow user's colour:
         MainActivity.isReversedColors = false;
-        saveBooleanSettings("isReversedColors", MainActivity.isReversedColors);
+        saveBooleanSettings("isReversedColors", false);
 
         // Activate orientation not to be portrait if is not TV:
         MainActivity.isOrientationBlocked = false;
-        saveBooleanSettings("isOrientationBlocked",
-                MainActivity.isOrientationBlocked);
+        saveBooleanSettings("isOrientationBlocked", false);
 
         // For keeping screen awake:
         MainActivity.isWakeLock = false;
-        saveBooleanSettings("isWakeLock", MainActivity.isWakeLock);
+        saveBooleanSettings("isWakeLock", false);
 
         // Reset also some static variable:
         MainActivity.isStarted = false;

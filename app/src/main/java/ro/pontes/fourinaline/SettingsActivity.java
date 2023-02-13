@@ -31,19 +31,19 @@ public class SettingsActivity extends Activity {
         // Check or check the check boxes, depending of current boolean values:
 
         // For speech in program:
-        CheckBox cbtSpeechSetting = (CheckBox) findViewById(R.id.cbtSpeechSetting);
+        CheckBox cbtSpeechSetting = findViewById(R.id.cbtSpeechSetting);
         cbtSpeechSetting.setChecked(MainActivity.isSpeech);
 
         // For sounds in program:
-        CheckBox cbtSoundsSetting = (CheckBox) findViewById(R.id.cbtSoundsSetting);
+        CheckBox cbtSoundsSetting = findViewById(R.id.cbtSoundsSetting);
         cbtSoundsSetting.setChecked(MainActivity.isSound);
 
         // For music in program:
-        CheckBox cbtMusicSetting = (CheckBox) findViewById(R.id.cbtMusicSetting);
+        CheckBox cbtMusicSetting = findViewById(R.id.cbtMusicSetting);
         cbtMusicSetting.setChecked(MainActivity.isMusic);
 
         // For portrait orientation:
-        CheckBox cbtPortraitOrientationSetting = (CheckBox) findViewById(R.id.cbtPortraitOrientationSetting);
+        CheckBox cbtPortraitOrientationSetting = findViewById(R.id.cbtPortraitOrientationSetting);
         if (MainActivity.isTV) {
             // For Android TV we need it to be unavailable and unchecked:
             cbtPortraitOrientationSetting.setChecked(false);
@@ -54,7 +54,7 @@ public class SettingsActivity extends Activity {
         }
 
         // For keeping screen awake:
-        CheckBox cbtScreenAwakeSetting = (CheckBox) findViewById(R.id.cbtScreenAwakeSetting);
+        CheckBox cbtScreenAwakeSetting = findViewById(R.id.cbtScreenAwakeSetting);
         if (MainActivity.isTV) {
             // For Android TV we need it to be unavailable and unchecked:
             cbtScreenAwakeSetting.setChecked(false);

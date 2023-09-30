@@ -32,9 +32,9 @@
     <string name="general_score">Score:\n%1$s %2$s – %3$s %4$s</string>
 
     <!-- Unique ID for advertising: -->
-    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner_ad_unit_id">ca-app-pub-9705662823127450/2745676298</string>
-    <string name="banner_ad_application_id">ca-app-pub-9705662823127450~1268943097</string>
+    <string name="banner_ad_unit_id_test" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-9705662823127450/2745676298</string>
+    <string name="banner_ad_application_id" translatable="false">ca-app-pub-9705662823127450~1268943097</string>
 
     <!-- Added in Beta 3: -->
     <string name="msg_ok">OK</string>
@@ -63,9 +63,9 @@
     <!-- About dialog: -->
     <string name="mnu_about">About…</string>
     <string name="about_title">About this game</string>
-    <string name="app_version">Four in a Line, version 2.1</string>
-    <string name="app_release_date">The 1.0 version was released on Sunday, 19 March 2017.\nRebranded as Four in a Line on Sathurday, 16 December 2017</string>
-    <string name="app_last_update">Last update: version 2.1, released on Saturday, 11 February 2023</string>
+    <string name="app_version">Four in a Line, version 2.3.1</string>
+    <string name="app_release_date">The 1.0 version was released on Sunday, 19 March 2017.\nRebranded as Four in a Line on Saturday, 16 December 2017</string>
+    <string name="app_last_update">Last update: version 2.3.1, released on Sunday, October 1, 2023</string>
     <string name="app_creator">Programmed by Emanuel Boboiu (Manu)</string>
     <string name="phone_number">Phone: +40740203043</string>
     <string name="email_address">E-mail: android@pontes.ro</string>

@@ -58,9 +58,9 @@
     <!-- About dialog: -->
     <string name="mnu_about">Acerca de…</string>
     <string name="about_title">Acerca del juego</string>
-    <string name="app_version">Cuatro en Raya versión 2.1</string>
+    <string name="app_version">Cuatro en Raya versión 2.3.1</string>
     <string name="app_release_date">La versión 1.0 fue lanzada el día domingo, 19 marzo 2017.\n Renombrada a Cuatro en Raya el sábado, 16 diciembre 2017</string>
-    <string name="app_last_update">Última actualización: versión 2.1, lanzada el Sábado, 11 febrero 2023</string>
+    <string name="app_last_update">Última actualización: versión 2.3.1, publicada el Domingo, 1 de octubre de 2023</string>
     <string name="app_creator">Programada por Emanuel Boboiu (Manu)</string>
     <string name="phone_number">Tel. +40740203043</string>
     <string name="email_address">Correo electrónico: android@pontes.ro</string>

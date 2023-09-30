@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Verbinden Vier</string>
+    <string name="title_activity_connect_four">Verbinden Vier</string>
+    <string name="cf_game_name">Verbinden Vier</string>
+    <string name="cf_new">Starten</string>
+    <string name="cf_status">Willkommen!</string>
+    <string name="welcome_message">Willkommen %1$s!</string>
+    <string name="cf_abandon_game">Aufgeben</string>
+    <string name="cf_game_type0">Gegen den Roboter spielen</string>
+    <string name="cf_game_type1">Gegen einen menschlichen Mitspieler spielen</string>
+    <string name="cf_cell_already_used">%1$s ist bereits belegt</string>
+    <string name="cf_cell_forbidden">%1$s ist verboten! Darunter befindet sich nichts.</string>
+    <string name="cf_column_is_full">Die Spalte %1$s ist voll.</string>
+    <string name="dealer">Roboter</string>
+    <string name="partner">Mitspieler</string>
+    <string name="my_cf_total">Du: %1$s</string>
+    <string name="dealers_cf_total">Roboter: %1$s</string>
+    <string name="partners_cf_total">Mitspieler: %1$s</string>
+    <string name="cf_current_move">Zugnummer %1$s – %2$s</string>
+    <string name="cf_win">Herzlichen Glückwunsch! Du hast diese Runde gewonnen!</string>
+    <string name="cf_lose">Entschuldigung, du hast diese Runde verloren…</string>
+    <string name="cf_draw">Diese Runde war ein Unentschieden…</string>
+    <string name="mnu_difficulty_level">Schwierigkeitsgrad…</string>
+    <string name="cf_choose_level">Schwierigkeitsgrad wählen</string>
+    <string name="cf_easy">Sehr einfach</string>
+    <string name="cf_medium">Einfach</string>
+    <string name="cf_hard">Mittel</string>
+    <string name="cf_impossible">Schwer</string>
+    <string name="action_settings">Allgemeine Einstellungen</string>
+    <string name="general_score">Punktzahl:\n%1$s %2$s – %3$s %4$s</string>
+
+    <!-- Added in Beta 3: -->
+    <string name="msg_ok">OK</string>
+    <string name="msg_cancel">Abbrechen</string>
+    <string name="msg_close">Schließen</string>
+    <string name="warning">Warnung!</string>
+    <string name="error">Fehler!</string>
+    <string name="mnu_nickname">Spitzname…</string>
+    <string name="nickname_title">Spitzname</string>
+    <string name="change_nickname_message">Geben Sie Ihren neuen Spitznamen ein. Dieser wird an verschiedenen Stellen angezeigt:</string>
+    <string name="change_nickname_message2">Ihr aktueller Spitzname ist %1$s. \nGeben Sie einen neuen Spitznamen ein, wenn Sie ihn ändern möchten:</string>
+    <string name="change_nickname_hint">Geben Sie hier Ihren neuen Spitznamen ein…</string>
+    <string name="anonymous">Anonym</string>
+    <string name="nickname_too_short">Ihr Spitzname muss mindestens drei Buchstaben enthalten. \nBitte geben Sie ihn erneut ein.</string>
+    <string name="nickname_success">Ihr neuer Spitzname ist %1$s. \nDies wird an verschiedenen Stellen in diesem Spiel angezeigt.</string>
+    <string name="no_connection_available">Es wurde festgestellt, dass keine Verbindung verfügbar ist. \nBitte verbinden Sie Ihr Gerät mit dem Internet und versuchen Sie es erneut.</string>
+    <string name="you">Sie</string>
+    <string name="title_activity_settings">Allgemeine Einstellungen</string>
+    <string name="enable_sounds">Töne aktivieren</string>
+    <string name="enable_music">Hintergrundmusik aktivieren</string>
+    <string name="enable_screen_awake">Bildschirm aktiv halten</string>
+    <string name="enable_portrait_orientation">Porträtmodus erzwingen</string>
+    <string name="enable_shake">Schütteln, um ein neues Spiel zu starten</string>
+    <string name="enable_speech">Sprachausgabe aktivieren, um die Zugänglichkeit zu verbessern</string>
+
+    <!-- Über das Dialogfeld: -->
+    <string name="mnu_about">Über…</string>
+    <string name="about_title">Über dieses Spiel</string>
+    <string name="app_version">Verbinden Vier, Version 2.3.1</string>
+    <string name="app_release_date">Die Version 1.0 wurde am Sonntag, den 19. März 2017 veröffentlicht. \nAm Samstag, den 16. Dezember 2017 wurde sie als Vier gewinnt neu gestaltet.</string>
+    <string name="app_last_update">Letztes Update: Version 2.3.1, veröffentlicht am Sonntag, 1. Oktober 2023</string>
+    <string name="app_creator">Programmiert von Emanuel Boboiu (Manu)</string>
+    <string name="phone_number">Telefon: +40740203043</string>
+    <string name="email_address">E-Mail: android@pontes.ro</string>
+    <string name="web_address">Webseite: www.android.pontes.ro</string>
+    <string name="app_credits1">Design erstellt von Iulian Duma</string>
+    <string name="app_credits2">Beta-Tests: Iulian Duma</string>
+    <string name="translators">Deutsche Übersetzung: ChatGPT</string>
+
+    <!-- Zur Bewertung der Anwendung: -->
+    <string name="mnu_rate">Bewerten…</string>
+    <string name="title_rate_app">Verbinden Vier bewerten</string>
+    <string name="body_rate_app">Wenn Ihnen dieses Spiel gefällt, bewerten Sie es bitte im Google Play Store.</string>
+    <string name="bt_rate">Jetzt bewerten!</string>
+    <string name="bt_not_now">Später!</string>
+
+    <!-- Gegen den Computer oder einen Partner spielen: -->
+    <string name="play_against_computer">Sie spielen gegen den Roboter-KI.</string>
+    <string name="play_against_partner">Sie spielen gegen einen Partner.</string>
+    <string name="mnu_game_type">Spiel Einstellungen…</string>
+    <string name="title_game_type_alert">Spiel Einstellungen</string>
+    <string name="choose_color_in_game_type_alert">Wählen Sie Ihre Farbe unten aus:</string>
+    <string name="play_with_yellow">Spielen Sie mit Gelb</string>
+    <string name="play_with_red">Spielen Sie mit Rot</string>
+
+    <!-- Strings für das Android TV-Menü: -->
+    <string name="mnu_tv_game_type">Spiel…</string>
+    <string name="mnu_tv_level">Schwierigkeitsgrad…</string>
+    <string name="mnu_tv_nickname">Spitzname…</string>
+    <string name="mnu_tv_settings">Einstellungen</string>
+    <string name="mnu_tv_about">Über…</string>
+
+    <!-- Andere Zeichenfolgen: -->
+    <string name="warning_no_available_if_started">Entschuldigung! Dieser Dialog ist nicht verfügbar, wenn das Spiel bereits gestartet wurde. Versuchen Sie es erneut, nachdem Sie dieses Spiel beendet haben.</string>
+    <string name="tv_timer">%1$s:%2$s – Sie %3$s%%, %4$s %5$s%%</string>
+    <string name="bt_reset_to_defaults">Spiel auf Standard zurücksetzen…</string>
+    <string name="title_default_settings">Auf Standard zurücksetzen</string>
+    <string name="body_default_settings">Sind Sie sicher, dass Sie das Spiel zurücksetzen möchten? Es wird in seinen ursprünglichen Zustand zurückversetzt.</string>
+    <string name="msg_yes">Ja</string>
+    <string name="msg_no">Nein</string>
+    <string name="user_won_entire_game">Herzlichen Glückwunsch! %1$s hat das gesamte Spiel gewonnen!</string>
+    <string name="partner_won_entire_game">Entschuldigung! %1$s hat das gesamte Spiel gewonnen!</string>
+    <string name="title_abandon_game">Abbrechen</string>
+    <string name="body_abandon_game">Sind Sie sicher, dass Sie diese Runde abbrechen möchten?</string>
+    <string name="abandon_at_user_turn_message">Das Abbrechen ist nur möglich, wenn Sie an der Reihe sind. Lassen Sie Ihren Partner ziehen und versuchen Sie es erneut!</string>
+    <string name="mnu_statistics">Online-Statistiken</string>
+
+
+</resources>

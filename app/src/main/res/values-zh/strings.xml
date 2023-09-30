@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">四子连珠</string>
+    <string name="title_activity_connect_four">四子连珠</string>
+    <string name="cf_game_name">四子连珠</string>
+    <string name="cf_new">开始游戏</string>
+    <string name="cf_status">欢迎！</string>
+    <string name="welcome_message">欢迎 %1$s!</string>
+    <string name="cf_abandon_game">认输" 按钮</string>
+    <string name="cf_game_type0">切换到与 AI 玩游戏模式</string>
+    <string name="cf_game_type1">切换到与玩家游戏模式，两个玩家使用同一台设备</string>
+    <string name="cf_cell_already_used">%1$s 已被使用</string>
+    <string name="cf_cell_forbidden">%1$s 这里不能下棋！下面没有棋子。</string>
+    <string name="cf_column_is_full">%1$s 专栏已满</string>
+    <string name="dealer">AI</string>
+    <string name="partner">玩家</string>
+    <string name="my_cf_total">我: %1$s</string>
+    <string name="dealers_cf_total">AI: %1$s</string>
+    <string name="partners_cf_total">播放器: %1$s</string>
+    <string name="cf_current_move">转动 %1$s – %2$s</string>
+    <string name="cf_win">恭喜！你赢了这场比赛!</string>
+    <string name="cf_lose">哦不，你输了这场比赛…</string>
+    <string name="cf_draw">这场比赛是平局…</string>
+    <string name="mnu_difficulty_level">难度级别…</string>
+    <string name="cf_choose_level">选择难度级别</string>
+    <string name="cf_easy">好简单</string>
+    <string name="cf_medium">简单的</string>
+    <string name="cf_hard">普通的</string>
+    <string name="cf_impossible">非常困难</string>
+    <string name="action_settings">常规设置</string>
+    <string name="general_score">分数:\n%1$s %2$s – %3$s %4$s</string>
+
+    <!-- Unique ID for advertising: -->
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id">ca-app-pub-9705662823127450/2745676298</string>
+    <string name="banner_ad_application_id">ca-app-pub-9705662823127450~1268943097</string>
+
+    <!-- Added in Beta 3: -->
+    <string name="msg_ok">好吧</string>
+    <string name="msg_cancel">取消</string>
+    <string name="msg_close">关闭选项</string>
+    <string name="warning">警告!</string>
+    <string name="error">错误!</string>
+    <string name="mnu_nickname">姓名…</string>
+    <string name="nickname_title">姓名</string>
+    <string name="change_nickname_message">设置你的名字。非常有必要在游戏中的不同地方展示它: </string>
+    <string name="change_nickname_message2">你的名字目前是 %1$s.\n如果要更改，请输入新名称: </string>
+    <string name="change_nickname_hint">在这里写下你的名字…</string>
+    <string name="anonymous">无名</string>
+    <string name="nickname_too_short">您的名字必须至少包含三个字母.\n请再写一次.</string>
+    <string name="nickname_success">你好 %1$s.\n现在我会用你的这个名字来称呼你。</string>
+    <string name="no_connection_available">我没有检测到连接。\n 请将您的设备连接到互联网，然后重试。</string>
+    <string name="you">我</string>
+    <string name="title_activity_settings">常规设置</string>
+    <string name="enable_sounds">打开游戏声音</string>
+    <string name="enable_music">打开游戏背景音乐</string>
+    <string name="enable_screen_awake">保持屏幕明亮</string>
+    <string name="enable_portrait_orientation">强制屏幕进入纵向模式</string>
+    <string name="enable_shake">摇动设备开始新游戏</string>
+    <string name="enable_speech">打开语音以提高可访问性</string>
+
+    <!-- About dialog: -->
+    <string name="mnu_about">介绍…</string>
+    <string name="about_title">关于这个游戏的信息</string>
+    <string name="app_version">四子连珠 2.3.1</string>
+    <string name="app_release_date">1.0 版于 2017 年 3 月 19 日星期日发布.\n2017 年 12 月 16 日，星期六，在英文版中更名为 Four in a Line</string>
+    <string name="app_last_update">最后更新：版本 2.3.1，发布于2023年10月1日星期日</string>
+    <string name="app_creator">由 Emanuel Boboiu (Manu) 编写的游戏</string>
+    <string name="phone_number">开发商电话: +40740203043</string>
+    <string name="email_address">E-mail: android@pontes.ro</string>
+    <string name="web_address">Web: www.android.pontes.ro</string>
+    <string name="app_credits1">尤利安杜马创作的平面设计</string>
+    <string name="app_credits2">Beta testing: Iulian Duma</string>
+    <string name="translators">由来自越南的 Dao Duc Trung 翻译成中文。</string>
+
+    <!-- To rate the application: -->
+    <string name="mnu_rate">游戏评论…</string>
+    <string name="title_rate_app">游戏评论</string>
+    <string name="body_rate_app">如果您喜欢这款游戏，请在 Google Play 商店中给它评分。通过这样做，游戏翻译器或程序员会感到快乐并做得更好。</string>
+    <string name="bt_rate">好的。好游戏，给个好评！</string>
+    <string name="bt_not_now">之后!</string>
+
+    <!-- Play against computer or a partner: -->
+    <string name="play_against_computer">你将与​​人工智能机器战斗</string>
+    <string name="play_against_partner">您将与使用相同设备的玩家对战</string>
+    <string name="mnu_game_type">安装游戏…</string>
+    <string name="title_game_type_alert">安装游戏</string>
+    <string name="choose_color_in_game_type_alert">选择你的颜色点击下面:</string>
+    <string name="play_with_yellow">玩黄色</string>
+    <string name="play_with_red">玩红色</string>
+
+    <!-- Strings for Android TV menu: -->
+    <string name="mnu_tv_game_type">播放类型…</string>
+    <string name="mnu_tv_level">难度级别…</string>
+    <string name="mnu_tv_nickname">姓名…</string>
+    <string name="mnu_tv_settings">环境</string>
+    <string name="mnu_tv_about">介绍…</string>
+
+    <!-- Other strings: -->
+    <string name="warning_no_available_if_started">对不起！如果游戏已经开始，则此对话框不可用.\n完成此游戏后重试。</string>
+    <string name="tv_timer">%1$s:%2$s – 我 %3$s%%, %4$s %5$s%%</string>
+    <string name="bt_reset_to_defaults">将游戏重置为默认…</string>
+    <string name="title_default_settings">将游戏重置为默认…</string>
+    <string name="body_default_settings">您确定要重置游戏吗?\n它将处于原始状态.</string>
+    <string name="msg_yes">有</string>
+    <string name="msg_no">不是</string>
+    <string name="user_won_entire_game">恭喜! %1$s 赢得整场比赛!</string>
+    <string name="partner_won_entire_game">不好了! %1$s 赢得整场比赛!</string>
+    <string name="title_abandon_game">投降</string>
+    <string name="body_abandon_game">投降?</string>
+    <string name="abandon_at_user_turn_message">只有轮到你时才会投降.\n让你的播放器去再试一次!</string>
+    <string name="mnu_statistics">在线统计</string>
+
+</resources>

@@ -31,11 +31,6 @@
     <string name="action_settings">Cài đặt chung</string>
     <string name="general_score">Điểm:\n%1$s %2$s – %3$s %4$s</string>
 
-    <!-- Unique ID for advertising: -->
-    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner_ad_unit_id">ca-app-pub-9705662823127450/2745676298</string>
-    <string name="banner_ad_application_id">ca-app-pub-9705662823127450~1268943097</string>
-
     <!-- Added in Beta 3: -->
     <string name="msg_ok">OK</string>
     <string name="msg_cancel">Hủy</string>
@@ -63,9 +58,9 @@
     <!-- About dialog: -->
     <string name="mnu_about">Giới thiệu…</string>
     <string name="about_title">Thông tin về trò chơi này</string>
-    <string name="app_version">Bốn trong một hàng, phiên bản 2.1</string>
+    <string name="app_version">Bốn trong một hàng, phiên bản 2.3.1</string>
     <string name="app_release_date">Phiên bản 1.0 được phát hành vào Chủ nhật, ngày 19 tháng 3 năm 2017.\nĐổi tên thành Four in a Line vào Thứ Bảy, ngày 16 tháng 12 năm 2017</string>
-    <string name="app_last_update">Lần cập nhật cuối cùng: phiên bản 2.1 thêm tiếng việt, phát hành vào Thứ sáu, ngày 10 tháng 2 năm 2023</string>
+    <string name="app_last_update">Cập nhật cuối: phiên bản 2.3.1, phát hành vào Chủ Nhật, ngày 1 tháng 10 năm 2023</string>
     <string name="app_creator">Lập trình bởi Emanuel Boboiu (Manu)</string>
     <string name="phone_number">Số điện thoại: +40740203043</string>
     <string name="email_address">E-mail: android@pontes.ro</string>

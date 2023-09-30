@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Quatre en ligne</string>
+    <string name="title_activity_connect_four">Quatre en ligne</string>
+    <string name="cf_game_name">Quatre en ligne</string>
+    <string name="cf_new">Démarrer</string>
+    <string name="cf_status">Bienvenue !</string>
+    <string name="welcome_message">Bienvenue %1$s !</string>
+    <string name="cf_abandon_game">Abandonner</string>
+    <string name="cf_game_type0">Changer pour jouer contre le robot</string>
+    <string name="cf_game_type1">Changer de jeu pour jouer contre un partenaire humain</string>
+    <string name="cf_cell_already_used">%1$s est déjà utilisé</string>
+    <string name="cf_cell_forbidden">%1$s interdit ! Il n\'y a rien en dessous.</string>
+    <string name="cf_column_is_full">La colonne %1$s est pleine.</string>
+    <string name="dealer">Robot</string>
+    <string name="partner">Partenaire</string>
+    <string name="my_cf_total">Vous : %1$s</string>
+    <string name="dealers_cf_total">Robot : %1$s</string>
+    <string name="partners_cf_total">Partenaire : %1$s</string>
+    <string name="cf_current_move">Coup numéro %1$s – %2$s</string>
+    <string name="cf_win">Félicitations ! Vous avez gagné cette manche !</string>
+    <string name="cf_lose">Désolé, vous avez perdu cette manche…</string>
+    <string name="cf_draw">Cette manche était nulle…</string>
+    <string name="mnu_difficulty_level">Niveau…</string>
+    <string name="cf_choose_level">Choisissez le niveau de difficulté</string>
+    <string name="cf_easy">Très facile</string>
+    <string name="cf_medium">Facile</string>
+    <string name="cf_hard">Moyen</string>
+    <string name="cf_impossible">Difficile</string>
+    <string name="action_settings">Paramètres généraux</string>
+    <string name="general_score">Score :\n%1$s %2$s – %3$s %4$s</string>
+
+    <!-- Ajouté dans la bêta 3 : -->
+    <string name="msg_ok">OK</string>
+    <string name="msg_cancel">Annuler</string>
+    <string name="msg_close">Fermer</string>
+    <string name="warning">Attention !</string>
+    <string name="error">Erreur !</string>
+    <string name="mnu_nickname">Pseudonyme…</string>
+    <string name="nickname_title">Pseudonyme</string>
+    <string name="change_nickname_message">Entrez votre nouveau pseudonyme. Il sera affiché à différents endroits :</string>
+    <string name="change_nickname_message2">Votre pseudonyme est %1$s.\nEntrez un nouveau pseudonyme si vous souhaitez le modifier :</string>
+    <string name="change_nickname_hint">Écrivez ici votre nouveau pseudonyme…</string>
+    <string name="anonymous">Anonyme</string>
+    <string name="nickname_too_short">Votre pseudonyme doit contenir au moins trois lettres.\nVeuillez réessayer.</string>
+    <string name="nickname_success">Votre nouveau pseudonyme est %1$s.\nIl apparaîtra à différents endroits dans ce jeu.</string>
+    <string name="no_connection_available">Nous détectons qu\'aucune connexion n\'est disponible.\nVeuillez connecter votre appareil à Internet et réessayer.</string>
+    <string name="you">Vous</string>
+    <string name="title_activity_settings">Paramètres généraux</string>
+    <string name="enable_sounds">Activer les sons</string>
+    <string name="enable_music">Activer la musique de fond</string>
+    <string name="enable_screen_awake">Maintenir l\'écran allumé</string>
+    <string name="enable_portrait_orientation">Forcer l\'orientation portrait</string>
+    <string name="enable_shake">Secouer pour commencer une nouvelle partie</string>
+    <string name="enable_speech">Activer la synthèse vocale pour améliorer l\'accessibilité</string>
+
+    <!-- About dialog: -->
+    <string name="mnu_about">À propos de…</string>
+    <string name="about_title">À propos de ce jeu</string>
+    <string name="app_version">Quatre en ligne, version 2.3.1</string>
+    <string name="app_release_date">La version 1.0 a été publiée le dimanche 19 mars 2017.\nRebaptisé Quatre en ligne le samedi 16 décembre 2017</string>
+    <string name="app_last_update">Dernière mise à jour : version 2.3.1, publiée le Dimanche 1 octobre 2023</string>
+    <string name="app_creator">Programmé par Emanuel Boboiu (Manu)</string>
+    <string name="phone_number">Téléphone : +40740203043</string>
+    <string name="email_address">E-mail : android@pontes.ro</string>
+    <string name="web_address">Web : www.android.pontes.ro</string>
+    <string name="app_credits1">Design créé par Iulian Duma</string>
+    <string name="app_credits2">Test bêta : Iulian Duma</string>
+    <string name="translators">Traduction en français : ChatGPT</string>
+
+    <!-- To rate the application: -->
+    <string name="mnu_rate">Noter…</string>
+    <string name="title_rate_app">Noter Puissance 4</string>
+    <string name="body_rate_app">Si vous aimez ce jeu, veuillez le noter dans le Google Play Store.</string>
+    <string name="bt_rate">Noter maintenant !</string>
+    <string name="bt_not_now">Plus tard !</string>
+    <string name="play_against_computer">Vous allez jouer contre l\'ordinateur</string>
+    <string name="play_against_partner">Vous allez jouer contre un partenaire</string>
+    <string name="mnu_game_type">Paramètres du jeu…</string>
+    <string name="title_game_type_alert">Paramètres du jeu</string>
+    <string name="choose_color_in_game_type_alert">Choisissez votre couleur en cliquant dessus ci-dessous :</string>
+    <string name="play_with_yellow">Jouer avec le jaune</string>
+    <string name="play_with_red">Jouer avec le rouge</string>
+
+    <!-- Strings for Android TV menu: -->
+    <string name="mnu_tv_game_type">Jeu…</string>
+    <string name="mnu_tv_level">Niveau…</string>
+    <string name="mnu_tv_nickname">Pseudonyme…</string>
+    <string name="mnu_tv_settings">Paramètres</string>
+    <string name="mnu_tv_about">À propos…</string>
+
+    <!-- Other strings: -->
+    <string name="warning_no_available_if_started">Désolé ! Ce dialogue n\'est pas disponible si le jeu est déjà commencé.\nEssayez à nouveau une fois que vous avez terminé ce jeu.</string>
+    <string name="tv_timer">%1$s:%2$s – vous %3$s%%, %4$s %5$s%%</string>
+    <string name="bt_reset_to_defaults">Réinitialiser le jeu aux valeurs par défaut…</string>
+    <string name="title_default_settings">Réinitialiser aux valeurs par défaut</string>
+    <string name="body_default_settings">Êtes-vous sûr de vouloir réinitialiser le jeu ?\nIl sera dans son état initial.</string>
+    <string name="msg_yes">Oui</string>
+    <string name="msg_no">Non</string>
+    <string name="user_won_entire_game">Félicitations ! %1$s a remporté l\'ensemble du match !</string>
+    <string name="partner_won_entire_game">Désolé ! %1$s a remporté l\'ensemble du match !</string>
+    <string name="title_abandon_game">Abandonner</string>
+    <string name="body_abandon_game">Êtes-vous sûr de vouloir abandonner cette manche ?</string>
+    <string name="abandon_at_user_turn_message">L\'abandon n\'est possible que lorsque c\'est votre tour.\nLaissez votre partenaire jouer et essayez à nouveau !</string>
+    <string name="mnu_statistics">Statistiques en ligne</string>
+
+</resources>

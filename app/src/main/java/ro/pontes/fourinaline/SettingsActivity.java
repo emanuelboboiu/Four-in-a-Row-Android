@@ -71,34 +71,28 @@ public class SettingsActivity extends Activity {
 
         Settings set = new Settings(this); // to save changes.
 
-        // Check which check box was clicked
-        switch (view.getId()) {
-            case R.id.cbtSpeechSetting:
-                MainActivity.isSpeech = checked;
-                set.saveBooleanSettings("isSpeech", MainActivity.isSpeech);
-                break;
+        int id = view.getId();
 
-            case R.id.cbtSoundsSetting:
-                MainActivity.isSound = checked;
-                set.saveBooleanSettings("isSound", MainActivity.isSound);
-                break;
+        if (id == R.id.cbtSpeechSetting) {
+            MainActivity.isSpeech = checked;
+            set.saveBooleanSettings("isSpeech", MainActivity.isSpeech);
 
-            case R.id.cbtMusicSetting:
-                MainActivity.isMusic = checked;
-                set.saveBooleanSettings("isMusic", MainActivity.isMusic);
-                break;
+        } else if (id == R.id.cbtSoundsSetting) {
+            MainActivity.isSound = checked;
+            set.saveBooleanSettings("isSound", MainActivity.isSound);
 
-            case R.id.cbtPortraitOrientationSetting:
-                MainActivity.isOrientationBlocked = checked;
-                set.saveBooleanSettings("isOrientationBlocked",
-                        MainActivity.isOrientationBlocked);
-                break;
+        } else if (id == R.id.cbtMusicSetting) {
+            MainActivity.isMusic = checked;
+            set.saveBooleanSettings("isMusic", MainActivity.isMusic);
 
-            case R.id.cbtScreenAwakeSetting:
-                MainActivity.isWakeLock = checked;
-                set.saveBooleanSettings("isWakeLock", MainActivity.isWakeLock);
-                break;
-        } // end switch.
+        } else if (id == R.id.cbtPortraitOrientationSetting) {
+            MainActivity.isOrientationBlocked = checked;
+            set.saveBooleanSettings("isOrientationBlocked", MainActivity.isOrientationBlocked);
+
+        } else if (id == R.id.cbtScreenAwakeSetting) {
+            MainActivity.isWakeLock = checked;
+            set.saveBooleanSettings("isWakeLock", MainActivity.isWakeLock);
+        }
     } // end onClick method.
 
     // The method to reset to defaults:

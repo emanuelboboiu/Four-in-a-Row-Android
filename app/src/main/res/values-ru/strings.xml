@@ -58,9 +58,9 @@
     <!-- About dialog: -->
     <string name="mnu_about">О программе…</string>
     <string name="about_title">Об игре Четыре в ряд</string>
-    <string name="app_version">Четыре в ряд, версия 2.3.1</string>
+    <string name="app_version">Четыре в ряд, версия 3.0</string>
     <string name="app_release_date">Версия 1.0 была написана в Воскресение, 19-го марта 2017 года</string>
-    <string name="app_last_update">Последнее обновление: версия 2.3.1, выпущена в воскресенье, 1 октября 2023 года</string>
+    <string name="app_last_update">Последнее обновление: версия 3.0, выпущена в субботу, 6 сентября 2025 года</string>
     <string name="app_creator">Разработчик: Emanuel Boboiu (Manu)</string>
     <string name="phone_number">Телефон: +40740203043</string>
     <string name="email_address">Е-мэйл: android@pontes.ro</string>

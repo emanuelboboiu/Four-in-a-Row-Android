@@ -58,9 +58,9 @@
     <!-- About dialog: -->
     <string name="mnu_about">Despre…</string>
     <string name="about_title">Despre Joc</string>
-    <string name="app_version">4 într-o linie, versiunea 2.3.1</string>
+    <string name="app_version">4 într-o linie, versiunea 3.0</string>
     <string name="app_release_date">Versiunea 1.0 a fost finalizată duminică, 19 martie 2017\nJocul a fost schimbat la denumirea 4 într-o linie sâmbătă, 16 decembrie 2017</string>
-    <string name="app_last_update">Ultima actualizare: versiune 2.3.1, finalizată duminică, 1 octombrie 2023</string>
+    <string name="app_last_update">Ultima actualizare: versiunea 3.0, lansată sâmbătă, 6 septembrie 2025</string>
     <string name="app_creator">Programat de Emanuel Boboiu (Manu)</string>
     <string name="phone_number">Telefon: +40740203043</string>
     <string name="email_address">E-mail: android@pontes.ro</string>

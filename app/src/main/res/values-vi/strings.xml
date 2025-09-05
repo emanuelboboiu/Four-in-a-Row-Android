@@ -58,9 +58,9 @@
     <!-- About dialog: -->
     <string name="mnu_about">Giới thiệu…</string>
     <string name="about_title">Thông tin về trò chơi này</string>
-    <string name="app_version">Bốn trong một hàng, phiên bản 2.3.1</string>
+    <string name="app_version">Bốn trong một hàng, phiên bản 3.0</string>
     <string name="app_release_date">Phiên bản 1.0 được phát hành vào Chủ nhật, ngày 19 tháng 3 năm 2017.\nĐổi tên thành Four in a Line vào Thứ Bảy, ngày 16 tháng 12 năm 2017</string>
-    <string name="app_last_update">Cập nhật cuối: phiên bản 2.3.1, phát hành vào Chủ Nhật, ngày 1 tháng 10 năm 2023</string>
+    <string name="app_last_update">Cập nhật cuối: phiên bản 3.0, phát hành vào Thứ Bảy, ngày 6 tháng 9 năm 2025</string>
     <string name="app_creator">Lập trình bởi Emanuel Boboiu (Manu)</string>
     <string name="phone_number">Số điện thoại: +40740203043</string>
     <string name="email_address">E-mail: android@pontes.ro</string>

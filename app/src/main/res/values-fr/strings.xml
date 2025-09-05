@@ -58,9 +58,9 @@
     <!-- About dialog: -->
     <string name="mnu_about">À propos de…</string>
     <string name="about_title">À propos de ce jeu</string>
-    <string name="app_version">Quatre en ligne, version 2.3.1</string>
+    <string name="app_version">Quatre en ligne, version 3.0</string>
     <string name="app_release_date">La version 1.0 a été publiée le dimanche 19 mars 2017.\nRebaptisé Quatre en ligne le samedi 16 décembre 2017</string>
-    <string name="app_last_update">Dernière mise à jour : version 2.3.1, publiée le Dimanche 1 octobre 2023</string>
+    <string name="app_last_update">Dernière mise à jour : version 3.0, publiée le samedi 6 septembre 2025</string>
     <string name="app_creator">Programmé par Emanuel Boboiu (Manu)</string>
     <string name="phone_number">Téléphone : +40740203043</string>
     <string name="email_address">E-mail : android@pontes.ro</string>

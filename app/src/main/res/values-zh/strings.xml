@@ -63,9 +63,9 @@
     <!-- About dialog: -->
     <string name="mnu_about">介绍…</string>
     <string name="about_title">关于这个游戏的信息</string>
-    <string name="app_version">四子连珠 2.3.1</string>
+    <string name="app_version">四子连珠 3.0</string>
     <string name="app_release_date">1.0 版于 2017 年 3 月 19 日星期日发布.\n2017 年 12 月 16 日，星期六，在英文版中更名为 Four in a Line</string>
-    <string name="app_last_update">最后更新：版本 2.3.1，发布于2023年10月1日星期日</string>
+    <string name="app_last_update">最后更新：版本 3.0，发布于2025年9月6日星期六</string>
     <string name="app_creator">由 Emanuel Boboiu (Manu) 编写的游戏</string>
     <string name="phone_number">开发商电话: +40740203043</string>
     <string name="email_address">E-mail: android@pontes.ro</string>

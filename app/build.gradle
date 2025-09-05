@@ -1,13 +1,17 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 34
-    buildToolsVersion "33.0.0"
+    namespace "ro.pontes.forinaline"
+    compileSdk 36
 
     defaultConfig {
-        applicationId "ro.pontes.forinaline"
-        minSdkVersion 23
-        targetSdkVersion 34
+        applicationId "ro.pontes.englishromaniandictionary"
+        minSdk 23
+        targetSdk 36
+        versionCode 17
+        versionName "3.0"
         resConfigs "de", "en", "es", "fr", "ro", "ru", "vi", "zh"
     }
 
@@ -20,7 +24,6 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.android.gms:play-services-ads:22.4.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.gms:play-services-ads:24.5.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
 }
-

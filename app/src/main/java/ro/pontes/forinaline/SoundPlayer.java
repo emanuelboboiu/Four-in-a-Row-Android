@@ -1,4 +1,4 @@
-package ro.pontes.fourinaline;
+package ro.pontes.forinaline;
 
 import android.content.Context;
 import android.media.AudioManager;

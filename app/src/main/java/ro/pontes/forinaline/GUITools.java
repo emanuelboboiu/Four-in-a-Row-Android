@@ -1,4 +1,4 @@
-package ro.pontes.fourinaline;
+package ro.pontes.forinaline;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -22,8 +22,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.Random;
-
-import ro.pontes.forinaline.R;
 
 public class GUITools {
 

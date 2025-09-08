@@ -1,4 +1,4 @@
-package ro.pontes.fourinaline;
+package ro.pontes.forinaline;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -41,8 +41,6 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 import java.lang.ref.WeakReference;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import ro.pontes.forinaline.R;
 
 
 public class MainActivity extends Activity {

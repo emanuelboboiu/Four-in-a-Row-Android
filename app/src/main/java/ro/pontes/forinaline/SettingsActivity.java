@@ -1,4 +1,4 @@
-package ro.pontes.fourinaline;
+package ro.pontes.forinaline;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -12,8 +12,6 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
-import ro.pontes.forinaline.R;
 
 public class SettingsActivity extends Activity {
 

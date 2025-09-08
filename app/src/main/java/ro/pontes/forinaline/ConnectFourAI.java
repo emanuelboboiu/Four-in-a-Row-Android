@@ -1,4 +1,4 @@
-package ro.pontes.fourinaline;
+package ro.pontes.forinaline;
 
 public class ConnectFourAI {
 

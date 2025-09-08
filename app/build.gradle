@@ -7,10 +7,10 @@ android {
     compileSdk 36
 
     defaultConfig {
-        applicationId "ro.pontes.englishromaniandictionary"
+        applicationId "ro.pontes.forinaline"
         minSdk 23
         targetSdk 36
-        versionCode 17
+        versionCode 20
         versionName "3.0"
         resConfigs "de", "en", "es", "fr", "ro", "ru", "vi", "zh"
     }

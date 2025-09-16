@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:baselineAligned="false"
+    android:fitsSystemWindows="true"
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:paddingLeft="@dimen/activity_horizontal_margin"

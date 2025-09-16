@@ -1,41 +1,42 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="ro.pontes.connectfour.MainActivity">
 
     <item
         android:id="@+id/mnuCfLevel"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom|withText"
-        android:title="@string/mnu_difficulty_level" />
+        android:title="@string/mnu_difficulty_level"
+        app:showAsAction="ifRoom|withText" />
     <item
         android:id="@+id/mnuGameType"
         android:orderInCategory="150"
-        android:showAsAction="never"
-        android:title="@string/mnu_game_type" />
+        android:title="@string/mnu_game_type"
+        app:showAsAction="never" />
     <item
         android:id="@+id/mnuNickname"
         android:orderInCategory="300"
-        android:showAsAction="never"
-        android:title="@string/mnu_nickname" />
+        android:title="@string/mnu_nickname"
+        app:showAsAction="never" />
     <item
         android:id="@+id/mnuSettings"
         android:orderInCategory="500"
-        android:showAsAction="never"
-        android:title="@string/action_settings" />
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
     <item
         android:id="@+id/mnuStatistics"
         android:orderInCategory="800"
-        android:showAsAction="never"
-        android:title="@string/mnu_statistics" />
+        android:title="@string/mnu_statistics"
+        app:showAsAction="never" />
     <item
         android:id="@+id/mnuRate"
         android:orderInCategory="900"
-        android:showAsAction="never"
-        android:title="@string/mnu_rate" />
+        android:title="@string/mnu_rate"
+        app:showAsAction="never" />
     <item
         android:id="@+id/mnuAbout"
         android:orderInCategory="1000"
-        android:showAsAction="never"
-        android:title="@string/mnu_about" />
+        android:title="@string/mnu_about"
+        app:showAsAction="never" />
 
 </menu>

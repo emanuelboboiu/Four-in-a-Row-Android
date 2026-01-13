@@ -11,7 +11,7 @@ android {
         minSdk 23
         targetSdk 36
         versionCode 21
-        versionName "3.0"
+        versionName "3.1"
         resConfigs "de", "en", "es", "fr", "ro", "ru", "vi", "zh"
     }
 
@@ -24,6 +24,6 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.android.gms:play-services-ads:24.5.0'
+    implementation 'com.google.android.gms:play-services-ads:24.6.0'
     implementation 'androidx.appcompat:appcompat:1.7.1'
 }
